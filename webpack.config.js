@@ -24,7 +24,7 @@ let config = {
     watch: dev,
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, 'dist')
     },
     devtool: dev ? 'cheap-module-eval-source-map' : false,
     module: {
