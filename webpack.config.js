@@ -1,20 +1,20 @@
-const path 								= require('path')
-const UglifyJSPlugin 			= require('uglifyjs-webpack-plugin')
-const dev 								= process.env.NODE_ENV === "dev"
-const ExtractTextPlugin 	= require("extract-text-webpack-plugin")
+const path                  = require('path')
+const UglifyJSPlugin        = require('uglifyjs-webpack-plugin')
+const dev                   = process.env.NODE_ENV === "dev"
+const ExtractTextPlugin     = require("extract-text-webpack-plugin")
 
 let cssLoaders = [
-  { loader: 'css-loader', options: { importLoaders: 1, minimize: !dev } }
+    { loader: 'css-loader', options: { importLoaders: 1, minimize: !dev } }
 ]
 if(!dev) {
-	cssLoaders.push({
-		loader: 'postcss-loader',
-		options: {
-			plugins: (loader) => [
-				require('autoprefixer')()
-			]
+    cssLoaders.push({
+        loader: 'postcss-loader',
+        options: {
+            plugins: (loader) => [
+                require('autoprefixer')()
+            ]
 		}
-	})
+    })
 }
 
 let config = {
