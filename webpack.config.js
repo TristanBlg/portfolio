@@ -1,7 +1,8 @@
 const path                  = require('path')
-const UglifyJSPlugin        = require('uglifyjs-webpack-plugin')
+const webpack               = require('webpack')
 const dev                   = process.env.NODE_ENV === "dev"
 const ExtractTextPlugin     = require("extract-text-webpack-plugin")
+// const BabiliPlugin          = require("babili-webpack-plugin")
 
 let cssLoaders = [
     { loader: 'css-loader', options: { importLoaders: 1, minimize: !dev } }
@@ -21,16 +22,20 @@ let config = {
     entry: {
         app: './src/App.js'
     },
-    watch: dev,
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     devtool: dev ? 'cheap-module-eval-source-map' : false,
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        hot: true,
+        port: 9000
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
                 use: ['babel-loader']
             },
@@ -58,13 +63,12 @@ let config = {
             filename: '[name].css',
             disable: dev
         }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
 
-if(!dev) {
-    config.plugins.push(new UglifyJSPlugin({
-        sourceMap: false
-    }))
-}
+// if(!dev) {
+//     config.plugins.push(new BabiliPlugin())
+// }
 
 module.exports = config
