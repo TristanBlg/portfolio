@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import './styles.scss'
 import Header from './components/Header'
 
 class App extends React.Component {
-    render() {
+    render() {
         return (
             <div>
                 <Header />
             </div>
         )
-    }
+	}
 }
 
 ReactDOM.render(
