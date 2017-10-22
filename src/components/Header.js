@@ -1,6 +1,12 @@
-import React from 'react'
+// @flow
 
+import * as React from 'react'
 import css from './styles.scss'
+
+type Props = {
+	links: Array<Object>,
+	infos: Object
+};
 
 const navbarLinks = [
 	{
@@ -16,7 +22,7 @@ const navbarLinks = [
 		url: "#"
 	},
 	{
-		name: "Skills",
+		name: "My skills",
 		url: "#"
 	},
 	{
@@ -24,21 +30,11 @@ const navbarLinks = [
 		url: "#"
 	}
 ]
-const infos = {
+const me = {
 	firstname: "Tristan",
 	lastname: "BOULANGER",
 	job: "Développeur Front-End"
 }
-const sidebarLinks = [
-	{
-		name: "g",
-		url: "#"
-	},
-	{
-		name: "in",
-		url: "#"
-	}
-]
 
 function Navbar(props){
 	const links = props.links
@@ -52,34 +48,22 @@ function Navbar(props){
 	)
 }
 function Infos(props){
-	const infos = props.infos
-
+	const me = props.infos
 	return (
 		<div className="infos">
-			<h1 className="infos__name"><span className="infos__name-firstname">{infos.firstname}</span><br/><span className="infos__name-lastname">{infos.lastname}</span></h1>
-			<h2 className="infos__job">{infos.job}</h2>
+			<h1 className="infos__name"><span className="infos__name-firstname">{me.firstname}</span><br/><span className="infos__name-lastname">{me.lastname}</span></h1>
+			<h2 className="infos__job">{me.job}</h2>
 		</div>
 	)
 }
-function Sidebar(props){
-	const links = props.links
-	const listLinks = links.map((link, index) => 
-		<li className="sidebar__item" key={index}>
-			<a className="sidebar__item-link" href={link.url}>{link.name}</a>
-		</li>
-	)
-	return (
-		<ul className="sidebar">{listLinks}</ul>
-	)
-}
 
-export default class Header extends React.Component {
+export default class Header extends React.Component<Props> {
 	render() {
+		const {links, infos} = this.props;
 		return(
 			<header className="header">
 				<Navbar links={navbarLinks} />
-				<Infos infos={infos} />
-				<Sidebar links={sidebarLinks} />
+				<Infos infos={me} />
 			</header>
 		)
 	}

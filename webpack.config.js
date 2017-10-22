@@ -2,7 +2,7 @@ const path                  = require('path')
 const webpack               = require('webpack')
 const dev                   = process.env.NODE_ENV === "dev"
 const ExtractTextPlugin     = require("extract-text-webpack-plugin")
-// const BabiliPlugin          = require("babili-webpack-plugin")
+const UglifyJSPlugin        = require('uglifyjs-webpack-plugin')
 
 let cssLoaders = [
     { loader: 'css-loader', options: { importLoaders: 1, minimize: !dev } }
@@ -20,7 +20,7 @@ if(!dev) {
 
 let config = {
     entry: {
-        app: './src/App.js'
+        app: './src/App'
     },
     output: {
         filename: '[name].js',
@@ -34,6 +34,12 @@ let config = {
     },
     module: {
         rules: [
+            {
+                enforce: "pre",
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
+                use: ['eslint-loader']
+            },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
@@ -67,8 +73,8 @@ let config = {
     ]
 }
 
-// if(!dev) {
-//     config.plugins.push(new BabiliPlugin())
-// }
+if(!dev) {
+    config.plugins.push(new UglifyJSPlugin())
+}
 
 module.exports = config
