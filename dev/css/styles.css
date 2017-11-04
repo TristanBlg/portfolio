@@ -8,4 +8,5 @@ body {
   font: normal 1.4em 'Hind', helvetica, sans-serif; }
 
 p {
-  color: #f00; }
+  color: #f00;
+  display: flex; }

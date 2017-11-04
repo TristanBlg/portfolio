@@ -1,38 +1,35 @@
-var gulp            = require('gulp'),
-	cleanCss        = require('gulp-clean-css'),
+let gulp            = require('gulp'),
+	cleancss        = require('gulp-clean-css'),
 	sass            = require('gulp-sass'),
 	sassLint        = require('gulp-sass-lint'),
 	babel           = require('gulp-babel'),
-	base64          = require('gulp-base64'),
 	eslint          = require('gulp-eslint'),
 	rename          = require('gulp-rename'),
 	sourcemaps      = require('gulp-sourcemaps'),
-	imageMin        = require('gulp-imagemin'),
+	imagemin        = require('gulp-imagemin'),
 	uglify          = require('gulp-uglify'),
 	runSequence     = require('run-sequence'),
-	cache           = require('gulp-cache'),
 	autoprefixer    = require('gulp-autoprefixer'),
 	del             = require('del'),
 	browserSync     = require('browser-sync');
 
-var source = './dev',
-	dist = './web';
+let source = './dev',
+	dist   = './web';
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', () => {
 	browserSync({
 		server: {
 			baseDir: source
 		},
 	})
 })
-gulp.task('sass-lint', function(){
-	return gulp.src(source+'/scss/**/*.scss')
+gulp.task('sass-lint', () => 
+	gulp.src(source+'/scss/**/*.scss')
 		.pipe(sassLint())
 		.pipe(sassLint.format())
-		.pipe(sassLint.failOnError())
-})
-gulp.task('sass', ['sass-lint'], function(){
-	return gulp.src(source+'/scss/main.scss')
+)
+gulp.task('sass', ['sass-lint'], () =>
+	gulp.src(source+'/scss/main.scss')
 		.pipe(sass())
 		.pipe(rename({
 			basename: 'styles'
@@ -41,24 +38,24 @@ gulp.task('sass', ['sass-lint'], function(){
 		.pipe(browserSync.reload({
 			stream: true
 		}))
-})
-gulp.task('css', ['sass'], function(){
-	return gulp.src(source+'/css/styles.css')
-		.pipe(cleanCss())
+)
+gulp.task('css', ['sass'], () =>
+	gulp.src(source+'/css/styles.css')
+        .pipe(autoprefixer())
+		.pipe(cleancss())
 		.pipe(rename({
 			basename: 'styles',
 			suffix: '.min'
 		}))
 		.pipe(gulp.dest(dist))
-})
-gulp.task('eslint', function(){
-	return gulp.src(source+'/js/*.js')
+)
+gulp.task('eslint', () =>
+	gulp.src(source+'/js/**/*.js')
 		.pipe(eslint())
 		.pipe(eslint.format())
-		.pipe(eslint.failAfterError());
-})
-gulp.task('js', ['eslint'], function(){
-	return gulp.src(source+'/js/*.js')
+)
+gulp.task('js', ['eslint'], () =>
+	gulp.src(source+'/js/**/*.js')
 		.pipe(babel())
 		.pipe(uglify())
 		.pipe(rename({
@@ -66,15 +63,32 @@ gulp.task('js', ['eslint'], function(){
 			suffix: '.min'
 		}))
 		.pipe(gulp.dest(dist))
-
+)
+gulp.task('images', () =>
+    gulp.src(source+'/images/**/*.+(png|jpg|gif|svg)')
+        .pipe(imagemin())
+        .pipe(gulp.dest(dist+'/images'))
+)
+gulp.task('fonts', () =>
+    gulp.src(source+'/fonts/**/*')
+        .pipe(gulp.dest(dist+'/fonts'))
+)
+gulp.task('clean', () => {
+    del(dist);
 })
-
-gulp.task('watch', ['browserSync', 'sass'], function(){
+gulp.task('watch', ['browserSync', 'sass'], () => {
 	gulp.watch(source+'/scss/**/*.scss', ['sass']);
 	gulp.watch(source+'/*.html', browserSync.reload);
-	gulp.watch(source+'/js/*.js');
+	gulp.watch(source+'/js/**/*.js', browserSync.reload);
 })
-
-
-
-
+gulp.task('build', callback => {
+    runSequence('clean', 
+        ['css', 'js', 'images', 'fonts'], 
+        callback
+    )
+})
+gulp.task('default', callback => {
+    runSequence(['sass', 'browserSync', 'watch'],
+        callback
+    )
+})

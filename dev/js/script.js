@@ -1,1 +1,2 @@
-alert('lol');
+const lol = 'maman';
+alert(lol);
