@@ -1,60 +1,43 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Welcome to my portfolio !",
-  "main": "index.js",
-  "scripts": {
-    "flow": "flow",
-    "dev": "NODE_ENV=dev webpack",
-    "dev:open": "NODE_ENV=dev webpack-dev-server --open",
-    "prod": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TristanBlg/portfolio.git"
-  },
-  "author": "Tristan BOULANGER",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TristanBlg/portfolio/issues"
-  },
-  "homepage": "https://github.com/TristanBlg/portfolio#readme",
-  "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-babili": "^0.1.4",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "eslint": "^4.9.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "flow-bin": "^0.57.3",
-    "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.6",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
-  },
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  }
+	"name": "Portoflio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TristanBlg/portfolio.git"
+	},
+	"author": "Tristan BOULANGER",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/TristanBlg/portfolio/issues"
+	},
+	"homepage": "https://github.com/TristanBlg/portfolio#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.0.1",
+		"babel-preset-env": "^1.6.1",
+		"browser-sync": "^2.18.13",
+		"clean-css": "^4.1.9",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-babel": "^7.0.0",
+		"gulp-base64": "^0.1.3",
+		"gulp-cache": "^1.0.1",
+		"gulp-clean-css": "^3.9.0",
+		"gulp-eslint": "^4.0.0",
+		"gulp-imagemin": "^3.4.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^3.1.0",
+		"gulp-sass-lint": "^1.3.4",
+		"gulp-sourcemaps": "^2.6.1",
+		"gulp-uglify": "^3.0.0",
+		"run-sequence": "^2.2.0"
+	},
+	"dependencies": {
+		"del": "^3.0.0"
+	}
 }

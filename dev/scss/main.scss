@@ -1,0 +1,14 @@
+$red: #f00;
+
+html {
+	font-size: .625em;
+	font-size: calc(1em * .625);
+}
+body {
+	margin: 0;
+	padding: 0;
+	font: normal 1.4em 'Hind', helvetica, sans-serif;
+}
+p {
+	color: $red;
+}
