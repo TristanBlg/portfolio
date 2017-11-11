@@ -1,0 +1,27 @@
+.header {
+	min-height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10rem 0;
+	background: url($bg) no-repeat center center / cover;
+
+	&__name {
+		font-size: 8rem;
+		font-weight: 700;
+		font-family: 'Montserrat';
+		color: #fff;
+		margin: 0 0 1rem;
+		line-height: 1;
+	}
+	&__job {
+		font-size: 2rem;
+		font-weight: 500;
+		color: #111;
+		margin: 0;
+		background: $yellow;
+		padding: .5rem 2.5rem;
+	}
+}
