@@ -1,5 +1,6 @@
 .section {
 	padding: 10rem 0;
+	text-align: center;
 
 	&__title {
 		text-align: center;
@@ -9,7 +10,7 @@
 		font-size: 1.4rem;
 		margin: 0 0 4rem;
 
-		&:after {
+		&::after {
 			display: block;
 			content: '';
 			width: 2rem;
@@ -18,10 +19,33 @@
 			background: #111;
 		}
 	}
+	&__subtitle {
+		font-size: 1.8rem;
+		margin: 0 0 1rem;
+		line-height: 1;
+		font-family: 'Montserrat';
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	&__text {
+		margin: 0;
+		font-weight: 300;
+		line-height: 1.5;
+	}
 }
 .container {
 	width: 100%;
 	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 3rem;
+
+	&--m {
+		max-width: 980px;
+	}
+	&--s {
+		max-width: 768px;
+	}
+	&--xs {
+		max-width: 480px;
+	}
 }

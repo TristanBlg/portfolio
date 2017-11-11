@@ -1,0 +1,20 @@
+.skillbar {
+	background: #f6f6f6;
+
+	&-skills {
+		display: flex;
+		justify-content: space-between;
+
+		&__item {
+			width: 31%;
+			background: #fff;
+			padding: 4rem 2.5rem;
+			text-align: left;
+			transition: all .2s ease-in-out;
+
+			&:hover {
+				box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+}

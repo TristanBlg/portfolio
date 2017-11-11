@@ -1,0 +1,55 @@
+.portfolio {
+
+	&-nav {
+		display: flex;
+		justify-content: center;
+
+		&__item {
+
+		}
+		&__link {
+			padding: 1rem 1.5rem;
+			color: #111;
+			font-weight: 500;
+			display: block;
+
+			&.active {
+				background: $yellow;
+			}
+		}
+	}
+
+	&-project {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+
+		&__item {
+			width: 33.333%;
+			margin-top: 3rem;
+			padding: 0 1.5rem;
+			position: relative;
+
+			&:hover > div {
+				opacity: 1;
+			}
+
+			img {
+				display: block;
+			}
+		}
+		&__overlay {
+			position: absolute;
+			background: $yellow;
+			top: 0;
+			left: 1.5rem;
+			right: 1.5rem;
+			height: 100%;
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
+		}
+	}
+}
