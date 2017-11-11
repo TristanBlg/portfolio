@@ -4,7 +4,6 @@ let gulp            = require('gulp'),
 	sassLint        = require('gulp-sass-lint'),
 	babel           = require('gulp-babel'),
 	eslint          = require('gulp-eslint'),
-	sourcemaps      = require('gulp-sourcemaps'),
 	imagemin        = require('gulp-imagemin'),
 	uglify          = require('gulp-uglify'),
 	runSequence     = require('run-sequence'),
@@ -30,7 +29,7 @@ gulp.task('css:lint', () =>
 		.pipe(sassLint.format())
 )
 gulp.task('css', ['css:lint'], () =>
-	gulp.src(source+'/scss/styles.scss')
+	gulp.src(source+'/scss/main.scss')
 		.pipe(sass())
 		.pipe(gulp.dest(source+'/css'))
 		.pipe(browserSync.reload({
@@ -38,7 +37,7 @@ gulp.task('css', ['css:lint'], () =>
 		}))
 )
 gulp.task('js:lint', () =>
-	gulp.src(source+'/js/**/*.js')
+	gulp.src(source+'/js/main.js')
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(browserSync.reload({
@@ -69,8 +68,8 @@ gulp.task('clean', () =>
 )
 gulp.task('watch', ['browserSync', 'css'], () => {
 	gulp.watch(source+'/scss/**/*.scss', ['css']);
-	gulp.watch(source+'/js/**/*.js', ['js:lint']);
-	gulp.watch(source+'/*.html', browserSync.reload);
+	gulp.watch(source+'/js/*.js', ['js:lint']);
+	gulp.watch(source+'/index.html', browserSync.reload);
 })
 gulp.task('build', callback => {
     runSequence('clean', 
