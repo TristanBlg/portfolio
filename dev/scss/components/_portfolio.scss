@@ -21,35 +21,30 @@
 
 	&-project {
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
 		flex-wrap: wrap;
-		margin-left: -1.5rem;
-		margin-right: -1.5rem;
 
 		&__item {
-			width: 33.333%;
-			margin-top: 3rem;
-			padding: 0 1.5rem;
+			flex: 0 0 percentage(1 / 3);
+			margin-top: $gutter;
 			position: relative;
-
-			&:hover > div {
-				opacity: 1;
-			}
-
-			img {
+			
+			&-picture {
 				display: block;
 			}
-		}
-		&__overlay {
-			position: absolute;
-			background: $yellow;
-			top: 0;
-			left: 1.5rem;
-			right: 1.5rem;
-			height: 100%;
-			opacity: 0;
-			transition: opacity .2s ease-in-out;
+			&-overlay {
+				position: absolute;
+				background: $yellow;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity .2s ease-in-out;
+			}
+
+			&:hover &-overlay {
+				opacity: 1;
+			}
 		}
 	}
 }

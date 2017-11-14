@@ -5,10 +5,10 @@
 	&__title {
 		text-align: center;
 		font-family: 'Montserrat';
-		letter-spacing: 10px;
+		letter-spacing: 8px;
 		font-weight: 700;
 		font-size: 1.4rem;
-		margin: 0 0 4rem;
+		margin: 0 0 ($gutter * 2);
 
 		&::after {
 			display: block;
@@ -31,21 +31,25 @@
 		margin: 0;
 		font-weight: 300;
 		line-height: 1.5;
+
+		&--high {
+			font-weight: 500;
+		}
 	}
 }
 .container {
 	width: 100%;
-	max-width: 1170px;
+	max-width: $container;
 	margin: 0 auto;
-	padding: 0 3rem;
+	padding: 0 $gutter;
 
 	&--m {
-		max-width: 980px;
+		max-width: $container_m;
 	}
 	&--s {
-		max-width: 768px;
+		max-width: $container_s;
 	}
 	&--xs {
-		max-width: 480px;
+		max-width: $container_xs;
 	}
 }
