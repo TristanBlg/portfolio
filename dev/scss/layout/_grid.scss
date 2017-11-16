@@ -31,9 +31,11 @@
 		margin: 0;
 		font-weight: 300;
 		line-height: 1.5;
+		font-size: 1.4rem;
 
 		&--high {
-			font-weight: 500;
+			font-weight: 700;
+			letter-spacing: 1px;
 		}
 	}
 }
@@ -51,5 +53,17 @@
 	}
 	&--xs {
 		max-width: $container_xs;
+	}
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: $gutter / -2;
+	margin-right: $gutter / -2;
+
+	.col {
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2;
+		display: flex;
 	}
 }

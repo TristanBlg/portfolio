@@ -5,28 +5,26 @@
 		justify-content: center;
 
 		&__item {
-
+			margin: 0 ceil($gutter / 4);
 		}
 		&__link {
-			padding: 1rem 1.5rem;
+			padding: 1rem $gutter;
 			color: #111;
-			font-weight: 500;
+			font-weight: 400;
 			display: block;
 
-			&.active {
+			&.active,
+			&:hover {
 				background: $yellow;
 			}
 		}
 	}
 
 	&-project {
-		display: flex;
-		flex-wrap: wrap;
 
 		&__item {
-			flex: 0 0 percentage(1 / 3);
-			margin-top: $gutter;
 			position: relative;
+			margin-top: $gutter;
 			
 			&-picture {
 				display: block;
@@ -40,11 +38,26 @@
 				height: 100%;
 				opacity: 0;
 				transition: opacity .2s ease-in-out;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 			}
 
 			&:hover &-overlay {
 				opacity: 1;
 			}
+		}
+	}
+
+	.col {
+		flex: 0 0 percentage(1 / 3);
+
+		@media (max-width: $container_s) {
+			flex: 0 0 percentage(1 / 2);
+		}
+		@media (max-width: $container_xs) {
+			flex: 0 0 percentage(1);
 		}
 	}
 }

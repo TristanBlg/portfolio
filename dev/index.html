@@ -18,7 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500|Montserrat:700" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar active">
+	<nav id="js-navbar" class="navbar">
 		<div class="container">
 			<div class="navbar-logo">
 				Logo.
@@ -42,7 +42,7 @@
 			</ul>
 		</div>
 	</nav>
-	<header class="header">
+	<header class="header bg">
 		<h1 class="header__name">
 			TRISTAN BOULANGER
 		</h1>
@@ -65,29 +65,35 @@
 			<h3 class="section__title">
 				MY SKILLS
 			</h3>
-			<div class="skillbar-skills">
-				<div class="skillbar-skills__item">
-					<h4 class="section__subtitle">DEVELOPMENT</h4>
-					<p class="section__text">
-						Javascript (Es6, ReactJS, NodeJS)<br>
-						Html (Seo, Accessibilité, Compatibilité)<br>
-						Css (Sass, Less, Bootstrap4)
-					</p>
+			<div class="skillbar-skills row">
+				<div class="col">
+					<div class="skillbar-skills__item">
+						<h4 class="section__subtitle">DEVELOPMENT</h4>
+						<p class="section__text">
+							Javascript (Es6, ReactJS, NodeJS)<br>
+							Html (Seo, Accessibilité, Compatibilité)<br>
+							Css (Sass, Less, Bootstrap4)
+						</p>
+					</div>
 				</div>
-				<div class="skillbar-skills__item">
-					<h4 class="section__subtitle">WEB DESIGN</h4>
-					<p class="section__text">
-						AdobeXD<br>
-						Sketch<br>
-						InVision
-					</p>
+				<div class="col">
+					<div class="skillbar-skills__item">
+						<h4 class="section__subtitle">WEB DESIGN</h4>
+						<p class="section__text">
+							AdobeXD<br>
+							Sketch<br>
+							InVision
+						</p>
+					</div>
 				</div>
-				<div class="skillbar-skills__item">
-					<h4 class="section__subtitle">TOOLS</h4>
-					<p class="section__text">
-						Task Runner (Gulp, Webpack)<br>
-						Git (Github)
-					</p>
+				<div class="col">
+					<div class="skillbar-skills__item">
+						<h4 class="section__subtitle">TOOLS</h4>
+						<p class="section__text">
+							Task Runner (Gulp, Webpack)<br>
+							Git (Github)
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -114,41 +120,59 @@
 					</a>
 				</li>
 			</ul>
-			<div class="portfolio-project">
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+			<div class="portfolio-project row">
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
-				<div class="portfolio-project__item">
-					<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
-					<div class="portfolio-project__item-overlay">
-						
+				<div class="col">
+					<div class="portfolio-project__item">
+						<img class="portfolio-project__item-picture" src="https://static.pexels.com/photos/214335/pexels-photo-214335.jpeg" alt="">
+						<div class="portfolio-project__item-overlay">
+							<h5 class="section__text section__text--high">COTTAGE</h5>
+							<p class="section__text">Web Design, Development</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -159,30 +183,36 @@
 			<h3 class="section__title">
 				GET IN TOUCH
 			</h3>
-			<div class="contact-way">
-				<div class="contact-way__item">
-					<p class="section__text section__text--high">
-						Téléphone
-					</p>
-					<p class="section__text">
-						+33 6 65 11 16 77
-					</p>
+			<div class="contact-way row">
+				<div class="col">
+					<div class="contact-way__item">
+						<p class="section__text section__text--high">
+							Téléphone
+						</p>
+						<p class="section__text">
+							+33 6 65 11 16 77
+						</p>
+					</div>
 				</div>
-				<div class="contact-way__item">
-					<p class="section__text section__text--high">
-						Email
-					</p>
-					<p class="section__text">
-						contact@tristanboulanger.fr
-					</p>
+				<div class="col">
+					<div class="contact-way__item">
+						<p class="section__text section__text--high">
+							Email
+						</p>
+						<p class="section__text">
+							contact@tristanboulanger.fr
+						</p>
+					</div>
 				</div>
-				<div class="contact-way__item">
-					<p class="section__text section__text--high">
-						Adresse
-					</p>
-					<p class="section__text">
-						92110 Clichy, France
-					</p>
+				<div class="col">
+					<div class="contact-way__item">
+						<p class="section__text section__text--high">
+							Adresse
+						</p>
+						<p class="section__text">
+							92110 Clichy, France
+						</p>
+					</div>
 				</div>
 			</div>
 			<p class="section__text">

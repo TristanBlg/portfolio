@@ -29,3 +29,9 @@ ul {
 img {
 	max-width: 100%;
 }
+::selection {
+	background: $yellow;
+}
+::-moz-selection {
+	background: $yellow;
+}
