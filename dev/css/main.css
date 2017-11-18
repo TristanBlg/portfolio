@@ -186,8 +186,7 @@ img {
       background: rgba(255, 255, 149, 0.8); }
 
 .portfolio-project__item {
-  position: relative;
-  margin-top: 20px; }
+  position: relative; }
   .portfolio-project__item-picture {
     display: block; }
   .portfolio-project__item-overlay {

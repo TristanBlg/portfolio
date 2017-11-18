@@ -1,4 +1,3 @@
-
 const header = document.querySelector('.bg')
 const navbar = document.getElementById('js-navbar')
 window.onscroll = () => {
@@ -12,7 +11,5 @@ window.onscroll = () => {
 	let headerRect = header.getBoundingClientRect()
 	let x = headerRect.top
 	let h = headerRect.height
-    console.log('x   '+x)
-    console.log('h   '+h)
     header.style.backgroundPosition = ('50% '+parseInt(-x / 5)+'px');
 }
