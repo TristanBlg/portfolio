@@ -195,8 +195,7 @@ img {
 .portfolio-project {
   margin-top: 20px; }
   .portfolio-project__item {
-    position: relative;
-    transition: transform .2s ease-in-out; }
+    position: relative; }
     .portfolio-project__item-picture {
       display: block; }
     .portfolio-project__item-overlay {

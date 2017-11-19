@@ -1,13 +1,13 @@
-@import 'helpers/_variables';
+@import 'helpers/variables';
+@import 'helpers/mixins';
 
-@import 'base/_reset';
+@import 'base/reset';
 
-@import 'layout/_grid';
+@import 'layout/grid';
 
-
-@import 'components/_nav';
-@import 'components/_header';
-@import 'components/_about';
-@import 'components/_skills';
-@import 'components/_portfolio';
-@import 'components/_contact';
+@import 'components/nav';
+@import 'components/header';
+@import 'components/about';
+@import 'components/skills';
+@import 'components/portfolio';
+@import 'components/contact';

@@ -7,13 +7,12 @@ class Sortable {
 	}
 
 	orderItems(arrTest){
-		console.log('start')
 		let {parent, column, margin} = this
-		console.log(arrTest)
+		let item
 		if(arrTest) {
-			var item = arrTest
+			item = arrTest
 		} else {
-			var item = this.item
+			item = this.item
 		}
 		let windowWidth = window.innerWidth
 
@@ -48,8 +47,16 @@ class Sortable {
 				})
 			)
 		}).then(function(){
+			parent.style.position = 'relative'
 			let parentHeight = ((Math.ceil(item.length / column) * arrayRectHeight[0]) + (margin * (Math.ceil(item.length / column) - 1)))
 			parent.style.height = parentHeight+'px'
+		}).then(function(){
+			// Bug last item get transition before position - Remove setTimeout
+			setTimeout(function(){
+				item.forEach(function(el, i){
+				el.style.transition = 'transform .4s ease-in-out'
+			})
+			}, 100)
 		}).catch(function(err){
 			console.error(err)
 		})
@@ -58,8 +65,10 @@ class Sortable {
 	clickFilter(ev) {
 		ev.preventDefault()
 		const dataLink = this.dataset.sortableLink
-
-		console.log(this.dataset.sortableLink)
+		document.querySelectorAll('[data-sortable-link]').forEach(function(el){
+			el.classList.remove('active')
+		})
+		this.classList.add('active')
 		let obj = document.querySelectorAll(`[data-sortable]`)
 		let arrTest = []
 		new Promise(function(resolve, reject){
