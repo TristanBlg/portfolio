@@ -7,6 +7,7 @@
 	flex-direction: column;
 	padding: 10rem 0;
 	background: url($bg) no-repeat center 0 / cover;
+	text-align: center;
 
 	&__name {
 		font-size: 8rem;
@@ -15,6 +16,13 @@
 		color: #fff;
 		margin: 0 0 1rem;
 		line-height: 1;
+
+		@media (max-width: $container_m) {
+			font-size: 6rem;
+		}
+		@media (max-width: $container_s) {
+			font-size: 4rem;
+		}
 	}
 	&__job {
 		font-size: 2rem;
