@@ -6,9 +6,15 @@ class Sortable {
 		this.margin = margin
 	}
 
-	orderItems(){
+	orderItems(arrTest){
 		console.log('start')
-		let {parent, item, column, margin} = this
+		let {parent, column, margin} = this
+		console.log(arrTest)
+		if(arrTest) {
+			var item = arrTest
+		} else {
+			var item = this.item
+		}
 		let windowWidth = window.innerWidth
 
 		if(windowWidth <= 980 && windowWidth > 480) {
@@ -55,19 +61,29 @@ class Sortable {
 
 		console.log(this.dataset.sortableLink)
 		let obj = document.querySelectorAll(`[data-sortable]`)
-		let items = Object.keys(obj).map((key) => obj[key]).filter(function(el){
-			if(dataLink === 'all') {
-				el.style.display = 'block'
-			} else {
-				if(el.dataset.sortable !== dataLink) {
-					el.style.display = 'none'
-				} else {
-					el.style.display = 'block'
-				}
-			}
-			
+		let arrTest = []
+		new Promise(function(resolve, reject){
+			resolve(
+				Object.keys(obj).map((key) => obj[key]).filter(function(el){
+					if(dataLink === 'all') {
+						el.style.display = 'block'
+						arrTest.push(el)
+					} else {
+						if(el.dataset.sortable !== dataLink) {
+							el.style.display = 'none'
+						} else {
+							el.style.display = 'block'
+							arrTest.push(el)
+						}
+					}
+					
+				})
+			)
+		}).then(function(){
+			sortable.orderItems(arrTest)
+		}).catch(function(err){
+			console.error(err)
 		})
-		sortable.orderItems()
 	}
 }
 
