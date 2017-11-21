@@ -161,6 +161,16 @@ img {
     background: rgba(255, 255, 149, 0.8);
     padding: .5rem 2.5rem; }
 
+.about__socialmedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
+  .about__socialmedia-link {
+    width: 20px;
+    display: block;
+    margin: 0 10px;
+    color: inherit; }
+
 .skillbar {
   background: #f6f6f6; }
   .skillbar-skills__item {
@@ -171,6 +181,9 @@ img {
     transition: all .2s ease-in-out; }
     .skillbar-skills__item:hover {
       box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1); }
+    .skillbar-skills__item-icon {
+      width: 60px;
+      margin-bottom: 10px; }
   .skillbar .col {
     flex: 0 0 33.33333%; }
     @media (max-width: 768px) {
@@ -231,6 +244,9 @@ img {
     margin-bottom: 40px; }
     .contact-way__item {
       margin: 0 20px; }
+      .contact-way__item-icon {
+        height: 40px;
+        margin-bottom: 10px; }
   @media (max-width: 768px) {
     .contact .col {
       flex: 0 0 100%;

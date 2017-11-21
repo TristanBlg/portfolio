@@ -8,6 +8,11 @@
 
 		&__item {
 			margin: 0 $gutter;
+
+			&-icon {
+				height: 40px;
+				margin-bottom: floor($gutter / 2);
+			}
 		}
 	}
 
