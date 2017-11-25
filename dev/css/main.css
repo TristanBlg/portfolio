@@ -161,7 +161,7 @@ img {
   justify-content: center;
   margin-top: 20px; }
   .about__socialmedia-link {
-    width: 20px;
+    width: 30px;
     display: block;
     margin: 0 10px;
     color: inherit; }
@@ -177,7 +177,7 @@ img {
     .skillbar-skills__item:hover {
       box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1); }
     .skillbar-skills__item-icon {
-      width: 60px;
+      width: 50px;
       margin-bottom: 10px; }
   .skillbar .col {
     flex: 0 0 33.33333%; }
@@ -219,6 +219,9 @@ img {
       justify-content: center;
       align-items: center;
       flex-direction: column; }
+      .portfolio-project__item-overlay__icon {
+        width: 30px;
+        margin-top: 10px; }
     .portfolio-project__item:hover .portfolio-project__item-overlay {
       opacity: 1; }
 
