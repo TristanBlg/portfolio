@@ -161,10 +161,12 @@ img {
   justify-content: center;
   margin-top: 20px; }
   .about__socialmedia-link {
-    width: 30px;
     display: block;
     margin: 0 10px;
     color: inherit; }
+  .about__socialmedia-icon {
+    height: 30px;
+    width: 30px; }
 
 .skillbar {
   background: #f6f6f6; }
@@ -177,6 +179,7 @@ img {
     .skillbar-skills__item:hover {
       box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1); }
     .skillbar-skills__item-icon {
+      height: 50px;
       width: 50px;
       margin-bottom: 10px; }
   .skillbar .col {
@@ -220,6 +223,7 @@ img {
       align-items: center;
       flex-direction: column; }
       .portfolio-project__item-overlay__icon {
+        height: 30px;
         width: 30px;
         margin-top: 10px; }
     .portfolio-project__item:hover .portfolio-project__item-overlay {
@@ -244,6 +248,7 @@ img {
       margin: 0 20px; }
       .contact-way__item-icon {
         height: 40px;
+        width: 40px;
         margin-bottom: 10px; }
   @media (max-width: 768px) {
     .contact .col {

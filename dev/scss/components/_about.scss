@@ -6,10 +6,13 @@
 		margin-top: $gutter;
 
 		&-link {
-			width: 30px;
 			display: block;
 			margin: 0 10px;
 			color: inherit;
+		}
+		&-icon {
+			height: 30px;
+			width: 30px;
 		}
 	}
 }
