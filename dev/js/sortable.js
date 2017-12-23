@@ -106,9 +106,9 @@ document.querySelectorAll('[data-sortable-link]').forEach(el => {
 	el.onclick = sortable.clickFilter
 })
 
-window.onresize = () => {
-	clearTimeout(window.resizedFinish)
-	window.resizedFinish = setTimeout(() => {
+window.addEventListener('resize', () => {
+	clearTimeout(window.sortableResize)
+	window.sortableResize = setTimeout(() => {
 		sortable.orderItems(undefined, true)
 	}, 100)
-}
+})
