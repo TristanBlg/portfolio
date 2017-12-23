@@ -5,6 +5,9 @@
 	left: 0;
 	width: 100%;
 	transition: background .2s ease-in-out;
+	@media screen and (max-width: $container_s) {
+		display: none;
+	}
 
 	.container {
 		justify-content: space-between;

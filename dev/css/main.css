@@ -92,6 +92,9 @@ img {
   left: 0;
   width: 100%;
   transition: background .2s ease-in-out; }
+  @media screen and (max-width: 768px) {
+    .navbar {
+      display: none; } }
   .navbar .container {
     justify-content: space-between;
     align-items: center;
