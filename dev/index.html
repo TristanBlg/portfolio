@@ -17,26 +17,67 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Montserrat:700" rel="stylesheet">
 </head>
 <body>
-	<nav id="js-navbar" class="navbar">
+	<nav id="js-navbar-mobile" class="navbar navbar--mobile">
 		<div class="container">
-			<div class="navbar-logo">
+			<ul class="navbar__nav navbar__nav--mobile nav">
+				<li>
+					<a href="#home" title="Home" class="nav__link">
+						<svg class="nav__link-icon">
+							<use xlink:href="./images/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#about" title="About me" class="nav__link">
+						<svg class="nav__link-icon">
+							<use xlink:href="./images/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#skill" title="My skills" class="nav__link">
+						<svg class="nav__link-icon">
+							<use xlink:href="./images/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#portfolio" title="Portfolio" class="nav__link">
+						<svg class="nav__link-icon">
+							<use xlink:href="./images/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#contact" title="Contact" class="nav__link">
+						<svg class="nav__link-icon">
+							<use xlink:href="./images/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav id="js-navbar-desktop" class="navbar navbar--desktop">
+		<div class="container">
+			<div class="navbar__logo">
 				Logo.
 			</div>
-			<ul class="navbar-nav">
-				<li class="navbar-nav__item">
-					<a href="#home" title="Home" class="navbar-nav__link">HOME</a>
+			<ul class="navbar__nav nav">
+				<li>
+					<a href="#home" title="Home" class="nav__link">HOME</a>
 				</li>
-				<li class="navbar-nav__item">
-					<a href="#about" title="About me" class="navbar-nav__link">ABOUT ME</a>
+				<li>
+					<a href="#about" title="About me" class="nav__link">ABOUT ME</a>
 				</li>
-				<li class="navbar-nav__item">
-					<a href="#skill" title="My skills" class="navbar-nav__link">MY SKILLS</a>
+				<li>
+					<a href="#skill" title="My skills" class="nav__link">MY SKILLS</a>
 				</li>
-				<li class="navbar-nav__item">
-					<a href="#portfolio" title="Portfolio" class="navbar-nav__link">PORTFOLIO</a>
+				<li>
+					<a href="#portfolio" title="Portfolio" class="nav__link">PORTFOLIO</a>
 				</li>
-				<li class="navbar-nav__item">
-					<a href="#contact" title="Contact" class="navbar-nav__link">CONTACT</a>
+				<li>
+					<a href="#contact" title="Contact" class="nav__link">CONTACT</a>
 				</li>
 			</ul>
 		</div>

@@ -90,43 +90,62 @@ img {
 .navbar {
   z-index: 9999;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   transition: background .2s ease-in-out; }
-  @media screen and (max-width: 768px) {
-    .navbar {
-      display: none; } }
+  .navbar--desktop {
+    display: block;
+    top: 0; }
+    @media screen and (max-width: 768px) {
+      .navbar--desktop {
+        display: none; } }
+  .navbar--mobile {
+    display: none;
+    bottom: 0;
+    background: #fff; }
+    @media screen and (max-width: 768px) {
+      .navbar--mobile {
+        display: block; } }
   .navbar .container {
     justify-content: space-between;
     align-items: center;
     display: flex; }
-  .navbar-logo {
+  .navbar__logo {
     color: #fff;
     font-size: 3rem;
     font-weight: 700;
     font-family: 'Montserrat';
     transition: all .2s ease-in-out; }
-  .navbar-nav {
+  .navbar__nav {
     display: flex; }
-    .navbar-nav__link {
+    .navbar__nav .nav__link {
       display: block;
       color: #fff;
       font-weight: 700;
       font-family: 'Montserrat';
       padding: 3rem 20px;
       transition: all .2s ease-in-out; }
+    .navbar__nav--mobile {
+      flex: 1;
+      justify-content: space-between;
+      justify-content: space-evenly; }
+      .navbar__nav--mobile .nav__link {
+        color: #111;
+        padding: 1rem; }
+        .navbar__nav--mobile .nav__link-icon {
+          width: 1.8rem;
+          height: 1.8rem; }
   .navbar.active {
     background: #fff;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); }
-  .navbar.active .navbar-logo {
+  .navbar.active .navbar__logo {
     color: #111;
     font-size: 2.4rem;
     font-weight: 700;
     font-family: 'Montserrat'; }
-  .navbar.active .navbar-nav {
+  .navbar.active .navbar__nav {
     display: flex; }
-    .navbar.active .navbar-nav__link {
+    .navbar.active .navbar__nav .nav__link {
       color: #111;
       padding: 2rem 20px; }
 
@@ -170,8 +189,8 @@ img {
     margin: 0 10px;
     color: inherit; }
   .about__socialmedia-icon {
-    height: 30px;
-    width: 30px; }
+    height: 3rem;
+    width: 3rem; }
 
 .skillbar {
   background: #f6f6f6; }
@@ -184,8 +203,8 @@ img {
     .skillbar-skills__item:hover {
       box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1); }
     .skillbar-skills__item-icon {
-      height: 50px;
-      width: 50px;
+      height: 5rem;
+      width: 5rem;
       margin-bottom: 10px; }
   .skillbar .col {
     flex: 0 0 33.33333%; }
@@ -228,8 +247,8 @@ img {
       align-items: center;
       flex-direction: column; }
       .portfolio-project__item-overlay__icon {
-        height: 30px;
-        width: 30px;
+        height: 3rem;
+        width: 3rem;
         margin-top: 10px; }
     .portfolio-project__item:hover .portfolio-project__item-overlay {
       opacity: 1; }
@@ -252,8 +271,8 @@ img {
     .contact-way__item {
       margin: 0 20px; }
       .contact-way__item-icon {
-        height: 40px;
-        width: 40px;
+        height: 4rem;
+        width: 4rem;
         margin-bottom: 10px; }
   @media (max-width: 768px) {
     .contact .col {

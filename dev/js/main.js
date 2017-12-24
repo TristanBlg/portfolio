@@ -40,7 +40,7 @@ navAutoScroll = () => {
 
 ready(() => {
 	const header = document.getElementById('js-header')
-	const navbar = document.getElementById('js-navbar')
+	const navbar = document.getElementById('js-navbar-desktop')
 
 	navAutoScroll()
 	headerParallax(header)
