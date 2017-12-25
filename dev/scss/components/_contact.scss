@@ -1,30 +1,33 @@
 .contact {
 	background: #f6f6f6;
 
-	&-way {
+	&__type {
+		display: flex;
 		justify-content: center;
 		align-items: flex-start;
 		margin-bottom: ($gutter * 2);
-
-		&__item {
-			margin: 0 $gutter;
-
-			&-icon {
-				height: 4rem;
-				width: 4rem;
-				margin-bottom: floor($gutter / 2);
-			}
-		}
-	}
-
-	.col {
-
 		@media (max-width: $container_s) {
-			flex: 0 0 percentage(1);
-			justify-content: center;
-			
-			&:not(:first-child) {
-				margin-top: $gutter;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.type {
+			//NOMANSLAND
+			&__item {
+				margin: 0 ($gutter * 2);
+				@media (max-width: $container_s) {
+					margin: 0;
+
+					&:not(:first-child) {
+						margin-top: ($gutter * 2);
+					}
+				}
+
+				&-icon {
+					height: 4rem;
+					width: 4rem;
+					margin-bottom: floor($gutter / 2);
+				}
 			}
 		}
 	}

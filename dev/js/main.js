@@ -5,14 +5,14 @@ ready = fn => {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 }
-navbarActive = (navbar) => {
+navbarActive = navbar => {
 	if(window.scrollY > 20) {
 		navbar.classList.add('active')
 	} else {
 		navbar.classList.remove('active')
 	}
 }
-headerParallax = (header) => {
+headerParallax = header => {
 	let headerRect = header.getBoundingClientRect()
 	let headerX = headerRect.top
     header.style.backgroundPositionY = (parseInt(-headerX / 5)+'px')
@@ -41,6 +41,10 @@ navAutoScroll = () => {
 ready(() => {
 	const header = document.getElementById('js-header')
 	const navbar = document.getElementById('js-navbar-desktop')
+	const container = 1170;
+	const containerM = 980;
+	const containerS = 768;
+	const containerXs = 480;
 
 	navAutoScroll()
 	headerParallax(header)

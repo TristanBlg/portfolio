@@ -2,7 +2,7 @@
 	padding: 10rem 0;
 	text-align: center;
 
-	&__title {
+	&-title {
 		text-align: center;
 		font-family: 'Montserrat';
 		letter-spacing: 8px;
@@ -19,7 +19,7 @@
 			background: $mainTextColor;
 		}
 	}
-	&__subtitle {
+	&-subtitle {
 		font-size: 1.8rem;
 		margin: 0 0 1rem;
 		line-height: 1;
@@ -27,7 +27,7 @@
 		font-weight: 700;
 		letter-spacing: 1px;
 	}
-	&__text {
+	&-text {
 		margin: 0;
 		font-weight: 300;
 		line-height: 1.5;
@@ -43,7 +43,7 @@
 	width: 100%;
 	max-width: $container;
 	margin: 0 auto;
-	padding: 0 $gutter;
+	padding: 0 ($gutter / 2);
 
 	&--m {
 		max-width: $container_m;
@@ -53,17 +53,5 @@
 	}
 	&--xs {
 		max-width: $container_xs;
-	}
-}
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: $gutter / -2;
-	margin-right: $gutter / -2;
-
-	.col {
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2;
-		display: flex;
 	}
 }

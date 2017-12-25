@@ -5,7 +5,7 @@ class Sortable {
 		margin = 20
 	}) {
 		this.parent = parent
-		this.item = this.parent.querySelectorAll('.portfolio-project__item')
+		this.item = Array.from(this.parent.children)
 		this.column = column
 		this.margin = margin
 	}
@@ -15,7 +15,7 @@ class Sortable {
 		let windowWidth = window.innerWidth
 
 		if(refresh){
-			console.log('refresh')
+			console.log('[Sortable] Refresh')
 		}
 		if(windowWidth <= 980 && windowWidth > 480) {
 			column = 2
@@ -110,5 +110,5 @@ window.addEventListener('resize', () => {
 	clearTimeout(window.sortableResize)
 	window.sortableResize = setTimeout(() => {
 		sortable.orderItems(undefined, true)
-	}, 100)
+	}, 500)
 })

@@ -5,14 +5,18 @@
 		justify-content: center;
 		margin-top: $gutter;
 
-		&-link {
-			display: block;
-			margin: 0 10px;
-			color: inherit;
-		}
-		&-icon {
-			height: 3rem;
-			width: 3rem;
+		.socialmedia {
+			//NOMANSLAND
+			&__link {
+				display: block;
+				margin: 0 10px;
+				color: inherit;
+
+				&-icon {
+					height: 3rem;
+					width: 3rem;
+				}
+			}
 		}
 	}
 }

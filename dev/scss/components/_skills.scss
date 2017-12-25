@@ -1,35 +1,39 @@
 .skillbar {
 	background: #f6f6f6;
 
-	&-skills {
-
-		&__item {
-			width: 100%;
-			background: #fff;
-			padding: ($gutter * 2) $gutter;
-			text-align: left;
-			transition: all .2s ease-in-out;
-
-			&:hover {
-				box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
-			}
-
-			&-icon {
-				height: 5rem;
-				width: 5rem;
-				margin-bottom: floor($gutter / 2);
-			}
-		}
-	}
-
-	.col {
-		flex: 0 0 percentage(1 / 3);
-
+	&__skills {
+		display: flex;
 		@media (max-width: $container_s) {
-			flex: 0 0 percentage(1);
-			
-			&:not(:first-child) {
-				margin-top: $gutter;
+			flex-direction: column;
+		}
+
+		.skills {
+			//NOMANSLAND
+			&__item {
+				flex: 1;
+				background: #fff;
+				padding: ($gutter * 2) $gutter;
+				text-align: left;
+				transition: box-shadow .2s ease-in-out;
+
+				&:not(:first-child):not(:last-child) {
+					margin: 0 $gutter;
+				}
+				&:not(:first-child),
+				&:not(:first-child):not(:last-child) {
+					@media (max-width: $container_s) {
+						margin: $gutter 0 0;
+					}
+				}
+				&:hover {
+					box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, .1);
+				}
+
+				&-icon {
+					height: 5rem;
+					width: 5rem;
+					margin-bottom: floor($gutter / 2);
+				}
 			}
 		}
 	}
