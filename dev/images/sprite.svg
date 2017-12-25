@@ -1,33 +1,51 @@
 <svg>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="address">
-		<path stroke-width="2" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M32 2a20 20 0 0 0-20 20c0 18 20 39 20 39s20-21 20-39A20 20 0 0 0 32 2z" stroke-linejoin="miter" stroke-linecap="round"></path>
-		<circle stroke-width="2" stroke-miterlimit="10" stroke="currentColor" fill="none" r="8" cy="22" cx="32" stroke-linejoin="miter" stroke-linecap="round"></circle>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="email">
-		<path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" d="M2 12l30 29 30-29M42 31.6L62 52M2 52l20-20.4" stroke-linejoin="miter" stroke-linecap="round"></path>
-	    <path fill="none" stroke="currentColor" stroke-miterlimit="10"
-	    stroke-width="2" d="M2 12h60v40H2z" stroke-linejoin="miter" stroke-linecap="round"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="phone">
-		<path d="M58.9 47l-10.4-6.8a4.8 4.8 0 0 0-6.5 1.3c-2.4 2.9-5.3 7.7-16.2-3.2S19.6 24.4 22.5 22a4.8 4.8 0 0 0 1.3-6.5L17 5.1c-.9-1.3-2.1-3.4-4.9-3S2 6.6 2 15.6s7.1 20 16.8 29.7S39.5 62 48.4 62s13.2-8 13.5-10-1.7-4.1-3-5z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter" stroke-linecap="round"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="webdesign">
-		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 45l-4 6v2h60v-2l-4-6"></path>
-		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 11h52v34H6z"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="development">
-		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 2h52l-4 54-22 6-22-6L6 2z"></path>
-		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M46 16H18l1 14h25.9L44 44l-12 4-11.7-4-.6-5.8"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="tools">
-		<path d="M61.949 12.739l-6.973 4.406a1.3 1.3 0 0 1-1.532-.1l-2.875-2.4A1.3 1.3 0 0 1 50.15 14l-.913-3.2a1.3 1.3 0 0 1 .606-1.49l7.967-4.563a11.738 11.738 0 0 0-19.2 10.428 4.011 4.011 0 0 1-1.1 3.363L18.544 37.514a3.98 3.98 0 0 1-3.339 1.1 11.542 11.542 0 0 0-1.466-.094A11.658 11.658 0 0 0 2.147 52.029l7.92-5a1.3 1.3 0 0 1 1.532.1l2.875 2.4a1.3 1.3 0 0 1 .419.644l.913 3.2a1.3 1.3 0 0 1-.606 1.49l-8.439 4.822a11.671 11.671 0 0 0 7.731 2.291A11.734 11.734 0 0 0 25.375 48.71a3.945 3.945 0 0 1 1.079-3.337l18.9-18.9a3.964 3.964 0 0 1 3.349-1.1A11.737 11.737 0 0 0 62 13.739c0-.339-.023-.669-.051-1z" fill="none" stroke="#202020" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="github">
-		<path d="M32 1.952a30.019 30.019 0 0 0-9.469 58.5c1.5.281 2.063-.656 2.063-1.406v-5.625c-8.344 1.779-10.125-3.563-10.125-3.563-1.406-3.469-3.375-4.406-3.375-4.406-2.719-1.875.187-1.781.187-1.781 3 .188 4.594 3.094 4.594 3.094 2.719 4.594 7.031 3.281 8.719 2.531a6.5 6.5 0 0 1 1.875-4.031c-6.656-.75-13.688-3.375-13.688-14.812a11.5 11.5 0 0 1 3.094-8.063 11.217 11.217 0 0 1 .281-7.969s2.531-.844 8.25 3.094a28.944 28.944 0 0 1 7.5-1.031 28.4 28.4 0 0 1 7.5 1.031c5.719-3.844 8.25-3.094 8.25-3.094a11.217 11.217 0 0 1 .281 7.969 11.34 11.34 0 0 1 3.094 8.063c0 11.531-7.031 14.063-13.688 14.813a7.262 7.262 0 0 1 2.063 5.534v8.25c0 .844.562 1.687 2.063 1.406A30.019 30.019 0 0 0 32 1.952z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
-	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="linkedin">
-		<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M3.078 22.331h12.188v36.844H3.078z" stroke-linejoin="miter"></path>
-		<path d="M46.719 21.112c-5.344 0-8.531 1.969-11.906 6.281v-5.062H22.625v36.844h12.281V39.206c0-4.219 2.156-8.344 7.031-8.344s7.781 4.125 7.781 8.25v20.063H62V38.269c0-14.532-9.844-17.157-15.281-17.157z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
-		<path d="M9.219 4.425C5.188 4.425 2 7.331 2 10.894s3.188 6.469 7.219 6.469 7.219-2.906 7.219-6.469-3.188-6.469-7.219-6.469z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
-	</symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="address">
+        <path stroke-width="2" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M32 2a20 20 0 0 0-20 20c0 18 20 39 20 39s20-21 20-39A20 20 0 0 0 32 2z" stroke-linejoin="miter" stroke-linecap="round"></path>
+        <circle stroke-width="2" stroke-miterlimit="10" stroke="currentColor" fill="none" r="8" cy="22" cx="32" stroke-linejoin="miter" stroke-linecap="round"></circle>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="email">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" d="M2 12l30 29 30-29M42 31.6L62 52M2 52l20-20.4" stroke-linejoin="miter" stroke-linecap="round"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10"
+        stroke-width="2" d="M2 12h60v40H2z" stroke-linejoin="miter" stroke-linecap="round"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="phone">
+        <path d="M58.9 47l-10.4-6.8a4.8 4.8 0 0 0-6.5 1.3c-2.4 2.9-5.3 7.7-16.2-3.2S19.6 24.4 22.5 22a4.8 4.8 0 0 0 1.3-6.5L17 5.1c-.9-1.3-2.1-3.4-4.9-3S2 6.6 2 15.6s7.1 20 16.8 29.7S39.5 62 48.4 62s13.2-8 13.5-10-1.7-4.1-3-5z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter" stroke-linecap="round"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="portfolio">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 45l-4 6v2h60v-2l-4-6"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 11h52v34H6z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="development">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M6 2h52l-4 54-22 6-22-6L6 2z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M46 16H18l1 14h25.9L44 44l-12 4-11.7-4-.6-5.8"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="tools">
+        <path d="M61.949 12.739l-6.973 4.406a1.3 1.3 0 0 1-1.532-.1l-2.875-2.4A1.3 1.3 0 0 1 50.15 14l-.913-3.2a1.3 1.3 0 0 1 .606-1.49l7.967-4.563a11.738 11.738 0 0 0-19.2 10.428 4.011 4.011 0 0 1-1.1 3.363L18.544 37.514a3.98 3.98 0 0 1-3.339 1.1 11.542 11.542 0 0 0-1.466-.094A11.658 11.658 0 0 0 2.147 52.029l7.92-5a1.3 1.3 0 0 1 1.532.1l2.875 2.4a1.3 1.3 0 0 1 .419.644l.913 3.2a1.3 1.3 0 0 1-.606 1.49l-8.439 4.822a11.671 11.671 0 0 0 7.731 2.291A11.734 11.734 0 0 0 25.375 48.71a3.945 3.945 0 0 1 1.079-3.337l18.9-18.9a3.964 3.964 0 0 1 3.349-1.1A11.737 11.737 0 0 0 62 13.739c0-.339-.023-.669-.051-1z" fill="none" stroke="#202020" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="github">
+        <path d="M32 1.952a30.019 30.019 0 0 0-9.469 58.5c1.5.281 2.063-.656 2.063-1.406v-5.625c-8.344 1.779-10.125-3.563-10.125-3.563-1.406-3.469-3.375-4.406-3.375-4.406-2.719-1.875.187-1.781.187-1.781 3 .188 4.594 3.094 4.594 3.094 2.719 4.594 7.031 3.281 8.719 2.531a6.5 6.5 0 0 1 1.875-4.031c-6.656-.75-13.688-3.375-13.688-14.812a11.5 11.5 0 0 1 3.094-8.063 11.217 11.217 0 0 1 .281-7.969s2.531-.844 8.25 3.094a28.944 28.944 0 0 1 7.5-1.031 28.4 28.4 0 0 1 7.5 1.031c5.719-3.844 8.25-3.094 8.25-3.094a11.217 11.217 0 0 1 .281 7.969 11.34 11.34 0 0 1 3.094 8.063c0 11.531-7.031 14.063-13.688 14.813a7.262 7.262 0 0 1 2.063 5.534v8.25c0 .844.562 1.687 2.063 1.406A30.019 30.019 0 0 0 32 1.952z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="linkedin">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M3.078 22.331h12.188v36.844H3.078z" stroke-linejoin="miter"></path>
+        <path d="M46.719 21.112c-5.344 0-8.531 1.969-11.906 6.281v-5.062H22.625v36.844h12.281V39.206c0-4.219 2.156-8.344 7.031-8.344s7.781 4.125 7.781 8.25v20.063H62V38.269c0-14.532-9.844-17.157-15.281-17.157z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
+        <path d="M9.219 4.425C5.188 4.425 2 7.331 2 10.894s3.188 6.469 7.219 6.469 7.219-2.906 7.219-6.469-3.188-6.469-7.219-6.469z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="home">
+        <path fill="none" stroke="#202020" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M2 29L32 5l30 24" stroke-linejoin="miter"></path>
+        <path fill="none" stroke="#202020" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M23 62V40h18v22" stroke-linejoin="miter"></path>
+        <path fill="none" stroke="#202020" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M10 22.6V62h44V8h-9v7.445" stroke-linejoin="miter"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="aboutme">
+        <path d="M50.4 51C40.5 49.1 40 46 40 44v-1.2a18.9 18.9 0 0 0 5.7-8.8h.1c3 0 3.8-6.3 3.8-7.3s.1-4.7-3-4.7C53 4 35.5-3.2 22.3 6c-5.4 0-5.9 8-3.9 16-3.1 0-3 3.8-3 4.7s.7 7.3 3.8 7.3c1 3.6 2.3 6.9 4.7 9v1.2c0 2 .5 5-9.5 6.8S2 62 2 62h60a14.6 14.6 0 0 0-11.6-11z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="miter" stroke-linecap="round"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="contact">
+        <path fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M26 38v21l10.3-14.6" stroke-linejoin="miter" stroke-linecap="round"></path>
+        <path fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M3 29L59 5l-9 48-24-15-23-9zM59 5L26 38" stroke-linejoin="miter" stroke-linecap="round"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="webdesign">
+        <path fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2" d="M2 20v36h60V20M2 8h60v12H2z"></path>
+        <circle cx="8" cy="14" r="1" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2"></circle>
+        <circle cx="15" cy="14" r="1" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2"></circle>
+        <circle cx="22" cy="14" r="1" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="miter" stroke-width="2"></circle>
+    </symbol>
 </svg>
