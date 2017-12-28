@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: normal normal 1.4em / 1.71429 "Ubuntu", helvetica, sans-serif;
+  font: normal normal 1.4em / 1.5 "Ubuntu", helvetica, sans-serif;
   color: #111; }
 
 a {
@@ -52,7 +52,7 @@ img {
       background: #111; }
   .section-text {
     font-size: 1.4rem;
-    line-height: 1.71429;
+    line-height: 1.5;
     margin: 0;
     font-weight: 300; }
     .section-text--high {
@@ -98,7 +98,7 @@ img {
   .navbar__logo {
     color: #fff;
     font-size: 3rem;
-    line-height: 1.6;
+    line-height: 1.4;
     font-weight: 700;
     font-family: 'Montserrat';
     transition: all .2s ease-in-out; }
@@ -108,7 +108,7 @@ img {
       display: block;
       color: #fff;
       font-size: 1.4rem;
-      line-height: 1.71429;
+      line-height: 1.5;
       font-weight: 700;
       font-family: 'Montserrat';
       padding: 3rem 20px;
@@ -129,7 +129,7 @@ img {
   .navbar.active .navbar__logo {
     color: #111;
     font-size: 2.4rem;
-    line-height: 1;
+    line-height: 1.75;
     font-weight: 700;
     font-family: 'Montserrat'; }
   .navbar.active .navbar__nav {
@@ -220,7 +220,7 @@ img {
     padding: 1rem 20px;
     color: #111;
     font-size: 1.4rem;
-    line-height: 1.71429;
+    line-height: 1.5;
     font-weight: 400;
     display: block; }
     .portfolio__nav .nav__link.active, .portfolio__nav .nav__link:hover {
