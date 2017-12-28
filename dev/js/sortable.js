@@ -55,7 +55,7 @@ class Sortable {
 			// Bug last item get transition before position - Remove setTimeout
 			setTimeout(() => {
 				item.forEach((el, i) => {
-				el.style.transition = 'transform .4s ease-in-out'
+				el.style.transition = 'transform .4s ease-in-out, opacity .2s ease-in-out'
 			})
 			}, 100)
 		}).catch(err => {
@@ -76,13 +76,13 @@ class Sortable {
 			resolve(
 				Object.keys(obj).map(key => obj[key]).filter(el => {
 					if(dataLink === 'all') {
-						el.style.display = 'block'
+						el.style.opacity = '1'
 						arrTest.push(el)
 					} else {
 						if(el.dataset.sortable !== dataLink) {
-							el.style.display = 'none'
+							el.style.opacity = '0'
 						} else {
-							el.style.display = 'block'
+							el.style.opacity = '1'
 							arrTest.push(el)
 						}
 					}
