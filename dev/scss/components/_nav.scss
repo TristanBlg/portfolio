@@ -33,6 +33,7 @@
 	&__logo {
 		color: #fff;
 		font-size: 3rem;
+		line-height: line-height(3rem, $baseline-rem);
 		font-weight: 700;
 		font-family: 'Montserrat';
 		transition: all .2s ease-in-out;
@@ -45,6 +46,8 @@
 			&__link {
 				display: block;
 				color: #fff;
+				font-size: 1.4rem;
+				line-height: line-height(1.4rem, $baseline-rem);
 				font-weight: 700;
 				font-family: 'Montserrat';
 				padding: 3rem $gutter;
@@ -80,6 +83,7 @@
 		&__logo {
 			color: #111;
 			font-size: 2.4rem;
+			line-height: line-height(2.4rem, $baseline-rem);
 			font-weight: 700;
 			font-family: 'Montserrat';
 		}

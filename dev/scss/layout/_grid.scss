@@ -5,9 +5,10 @@
 	&-title {
 		text-align: center;
 		font-family: 'Montserrat';
-		letter-spacing: 8px;
+		letter-spacing: 0.8rem;
 		font-weight: 700;
 		font-size: 1.4rem;
+		line-height: 1;
 		margin: 0 0 ($gutter * 2);
 
 		&::after {
@@ -19,23 +20,15 @@
 			background: $mainTextColor;
 		}
 	}
-	&-subtitle {
-		font-size: 1.8rem;
-		margin: 0 0 1rem;
-		line-height: 1;
-		font-family: 'Montserrat';
-		font-weight: 700;
-		letter-spacing: 1px;
-	}
 	&-text {
+		font-size: 1.4rem;
+		line-height: line-height(1.4rem, $baseline-rem);
 		margin: 0;
 		font-weight: 300;
-		line-height: 1.5;
-		font-size: 1.4rem;
 
 		&--high {
 			font-weight: 700;
-			letter-spacing: 1px;
+			letter-spacing: 0.1rem;
 		}
 	}
 }

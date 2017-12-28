@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: normal 1.4em 'Ubuntu', helvetica, sans-serif;
+  font: normal normal 1.4em / 1.71429 "Ubuntu", helvetica, sans-serif;
   color: #111; }
 
 a {
@@ -38,9 +38,10 @@ img {
   .section-title {
     text-align: center;
     font-family: 'Montserrat';
-    letter-spacing: 8px;
+    letter-spacing: 0.8rem;
     font-weight: 700;
     font-size: 1.4rem;
+    line-height: 1;
     margin: 0 0 40px; }
     .section-title::after {
       display: block;
@@ -49,21 +50,14 @@ img {
       margin: 1rem auto 0;
       height: .2rem;
       background: #111; }
-  .section-subtitle {
-    font-size: 1.8rem;
-    margin: 0 0 1rem;
-    line-height: 1;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    letter-spacing: 1px; }
   .section-text {
+    font-size: 1.4rem;
+    line-height: 1.71429;
     margin: 0;
-    font-weight: 300;
-    line-height: 1.5;
-    font-size: 1.4rem; }
+    font-weight: 300; }
     .section-text--high {
       font-weight: 700;
-      letter-spacing: 1px; }
+      letter-spacing: 0.1rem; }
 
 .container {
   width: 100%;
@@ -104,6 +98,7 @@ img {
   .navbar__logo {
     color: #fff;
     font-size: 3rem;
+    line-height: 1.6;
     font-weight: 700;
     font-family: 'Montserrat';
     transition: all .2s ease-in-out; }
@@ -112,6 +107,8 @@ img {
     .navbar__nav .nav__link {
       display: block;
       color: #fff;
+      font-size: 1.4rem;
+      line-height: 1.71429;
       font-weight: 700;
       font-family: 'Montserrat';
       padding: 3rem 20px;
@@ -132,6 +129,7 @@ img {
   .navbar.active .navbar__logo {
     color: #111;
     font-size: 2.4rem;
+    line-height: 1;
     font-weight: 700;
     font-family: 'Montserrat'; }
   .navbar.active .navbar__nav {
@@ -151,25 +149,32 @@ img {
   background: url("../images/bg.jpg") no-repeat center 0/cover;
   text-align: center; }
   .header__name {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 700;
     font-family: 'Montserrat';
     color: #fff;
     margin: 0 0 1rem;
     line-height: 1; }
-    @media (max-width: 980px) {
-      .header__name {
-        font-size: 6rem; } }
     @media (max-width: 768px) {
       .header__name {
         font-size: 4rem; } }
+    @media (max-width: 480px) {
+      .header__name {
+        font-size: 3.2rem; } }
   .header__job {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1;
     font-weight: 400;
     color: #111;
     margin: 0;
     background: rgba(255, 255, 149, 0.8);
     padding: .5rem 2.5rem; }
+    @media (max-width: 768px) {
+      .header__job {
+        font-size: 1.6rem; } }
+    @media (max-width: 480px) {
+      .header__job {
+        font-size: 1.4rem; } }
 
 .about__socialmedia {
   display: flex;
@@ -214,6 +219,8 @@ img {
   .portfolio__nav .nav__link {
     padding: 1rem 20px;
     color: #111;
+    font-size: 1.4rem;
+    line-height: 1.71429;
     font-weight: 400;
     display: block; }
     .portfolio__nav .nav__link.active, .portfolio__nav .nav__link:hover {

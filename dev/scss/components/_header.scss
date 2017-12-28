@@ -10,26 +10,32 @@
 	text-align: center;
 
 	&__name {
-		font-size: 8rem;
+		font-size: 6rem;
 		font-weight: 700;
 		font-family: 'Montserrat';
 		color: #fff;
 		margin: 0 0 1rem;
 		line-height: 1;
-
-		@media (max-width: $container_m) {
-			font-size: 6rem;
-		}
 		@media (max-width: $container_s) {
 			font-size: 4rem;
 		}
+		@media (max-width: $container_xs) {
+			font-size: 3.2rem;
+		}
 	}
 	&__job {
-		font-size: 2rem;
+		font-size: 1.8rem;
+		line-height: 1;
 		font-weight: 400;
 		color: $mainTextColor;
 		margin: 0;
 		background: $yellow;
 		padding: .5rem 2.5rem;
+		@media (max-width: $container_s) {
+			font-size: 1.6rem;
+		}
+		@media (max-width: $container_xs) {
+			font-size: 1.4rem;
+		}
 	}
 }
