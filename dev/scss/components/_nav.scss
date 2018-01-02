@@ -32,8 +32,8 @@
 
 	&__logo {
 		color: #fff;
-		font-size: 3rem;
-		line-height: line-height(3rem, $baseline-rem);
+		font-size: 2.4rem;
+		line-height: line-height(2.4rem, $baseline-rem);
 		font-weight: 700;
 		font-family: 'Montserrat';
 		transition: all .2s ease-in-out;
@@ -48,8 +48,8 @@
 				color: #fff;
 				font-size: 1.4rem;
 				line-height: line-height(1.4rem, $baseline-rem);
-				font-weight: 700;
-				font-family: 'Montserrat';
+				font-weight: 400;
+				font-family: 'Ubuntu';
 				padding: 3rem $gutter;
 				transition: all .2s ease-in-out;
 			}
@@ -82,10 +82,8 @@
 	&.active & {
 		&__logo {
 			color: #111;
-			font-size: 2.4rem;
-			line-height: line-height(2.4rem, $baseline-rem);
-			font-weight: 700;
-			font-family: 'Montserrat';
+			font-size: 1.8rem;
+			line-height: line-height(1.8rem, $baseline-rem);
 		}
 		&__nav {
 			display: flex;

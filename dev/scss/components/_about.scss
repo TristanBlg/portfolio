@@ -19,4 +19,10 @@
 			}
 		}
 	}
+
+	.section {
+		&-text {
+			text-align: left;
+		}
+	}
 }
