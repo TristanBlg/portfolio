@@ -1,49 +1,16 @@
-.section {
-	padding: 10rem 0;
-
-	&-title {
-		text-align: center;
-		font-family: 'Montserrat';
-		letter-spacing: 0.8rem;
-		font-weight: 700;
-		font-size: 1.4rem;
-		line-height: 1;
-		margin: 0 0 ($gutter * 2);
-
-		&::after {
-			display: block;
-			content: '';
-			width: 2rem;
-			margin: 1rem auto 0;
-			height: .2rem;
-			background: $mainTextColor;
-		}
-	}
-	&-text {
-		font-size: 1.4rem;
-		line-height: line-height(1.4rem, $baseline-rem);
-		margin: 0;
-		font-weight: 300;
-
-		&--high {
-			font-weight: 700;
-			letter-spacing: 0.1rem;
-		}
-	}
-}
 .container {
 	width: 100%;
-	max-width: $container;
+	max-width: $breakpoint;
 	margin: 0 auto;
 	padding: 0 ($gutter / 2);
 
 	&--m {
-		max-width: $container_m;
+		max-width: $breakpoint_m;
 	}
 	&--s {
-		max-width: $container_s;
+		max-width: $breakpoint_s;
 	}
 	&--xs {
-		max-width: $container_xs;
+		max-width: $breakpoint_xs;
 	}
 }

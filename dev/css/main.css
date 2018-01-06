@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: normal normal 1.4em / 1.5 "Ubuntu", helvetica, sans-serif;
+  font: normal 300 1.4em / 1.5 "Ubuntu", helvetica, sans-serif;
   color: #111; }
 
 a {
@@ -109,7 +109,7 @@ img {
       font-size: 1.4rem;
       line-height: 1.5;
       font-weight: 400;
-      font-family: 'Ubuntu';
+      font-family: 'Montserrat';
       padding: 3rem 20px;
       transition: all .2s ease-in-out; }
     .navbar__nav--mobile {
@@ -136,42 +136,10 @@ img {
       padding: 2rem 20px; }
 
 .header {
-  min-height: 100vh;
+  height: 500px;
+  height: 65vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10rem 0;
-  background: url("../images/bg.jpg") no-repeat center 0/cover;
-  text-align: center; }
-  .header__name {
-    font-size: 6rem;
-    font-weight: 700;
-    font-family: 'Montserrat';
-    color: #fff;
-    margin: 0 0 1rem;
-    line-height: 1; }
-    @media (max-width: 768px) {
-      .header__name {
-        font-size: 4rem; } }
-    @media (max-width: 480px) {
-      .header__name {
-        font-size: 3.2rem; } }
-  .header__job {
-    font-size: 1.8rem;
-    line-height: 1;
-    font-weight: 400;
-    color: #111;
-    margin: 0;
-    background: rgba(255, 255, 149, 0.8);
-    padding: .5rem 2.5rem; }
-    @media (max-width: 768px) {
-      .header__job {
-        font-size: 1.6rem; } }
-    @media (max-width: 480px) {
-      .header__job {
-        font-size: 1.4rem; } }
+  background: url("https://static.pexels.com/photos/79290/black-and-white-code-programming-tech-79290.jpeg") no-repeat center 0/cover; }
 
 .about__socialmedia {
   display: flex;
@@ -221,7 +189,7 @@ img {
     color: #111;
     font-size: 1.4rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 300;
     display: block; }
     .portfolio__nav .nav__link.active, .portfolio__nav .nav__link:hover {
       background: rgba(255, 255, 149, 0.8); }

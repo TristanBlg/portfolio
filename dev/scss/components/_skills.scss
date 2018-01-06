@@ -3,7 +3,7 @@
 
 	&__skills {
 		display: flex;
-		@media (max-width: $container_s) {
+		@media (max-width: $breakpoint_s) {
 			flex-direction: column;
 		}
 
@@ -21,7 +21,7 @@
 				}
 				&:not(:first-child),
 				&:not(:first-child):not(:last-child) {
-					@media (max-width: $container_s) {
+					@media (max-width: $breakpoint_s) {
 						margin: $gutter 0 0;
 					}
 				}

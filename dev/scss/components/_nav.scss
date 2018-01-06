@@ -10,7 +10,7 @@
 	&--desktop {
 		display: block;
 		top: 0;
-		@media screen and (max-width: $container_s) {
+		@media screen and (max-width: $breakpoint_s) {
 			display: none;
 		}
 	}
@@ -19,7 +19,7 @@
 		bottom: 0;
 		background: #fff;
 		box-shadow: #{'0 -'}$boxShadowNav;
-		@media screen and (max-width: $container_s) {
+		@media screen and (max-width: $breakpoint_s) {
 			display: block;
 		}
 	}
@@ -49,7 +49,7 @@
 				font-size: 1.4rem;
 				line-height: line-height(1.4rem, $baseline-rem);
 				font-weight: 400;
-				font-family: 'Ubuntu';
+				font-family: 'Montserrat';
 				padding: 3rem $gutter;
 				transition: all .2s ease-in-out;
 			}
