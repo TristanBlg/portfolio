@@ -1,22 +1,23 @@
 class Sortable {
 	constructor({
-		parent, 
+		parent = document.querySelector('.sortable'),
+		links = document.querySelectorAll('[data-sortable-link]'),
+		active = 'active',
 		column = 3, 
 		margin = 20
 	}) {
 		this.parent = parent
-		this.item = Array.from(this.parent.children)
+		this.links = Array.from(links)
+		this.active = active
+		this.items = Array.from(this.parent.children)
 		this.column = column
 		this.margin = margin
 	}
 
-	orderItems(item = this.item, refresh){
-		let {parent, column, margin} = this
+	orderItems(){
+		let {parent, items, column, margin} = this
 		let windowWidth = window.innerWidth
 
-		if(refresh){
-			console.log('[Sortable] Refresh')
-		}
 		if(windowWidth <= 980 && windowWidth > 480) {
 			column = 2
 		} else if (windowWidth <= 480) {
@@ -30,7 +31,7 @@ class Sortable {
 
 		new Promise((resolve, reject) => {
 			resolve(
-				item.forEach((el, i) => {
+				items.forEach((el, i) => {
 					el.style.position = "absolute"
 					el.style.width = rectWidth+'px'
 					arrayRectHeight.push(el.offsetHeight)
@@ -49,12 +50,12 @@ class Sortable {
 			)
 		}).then(() => {
 			parent.style.position = 'relative'
-			let parentHeight = ((Math.ceil(item.length / column) * arrayRectHeight[0]) + (margin * (Math.ceil(item.length / column) - 1)))
+			let parentHeight = ((Math.ceil(items.length / column) * arrayRectHeight[0]) + (margin * (Math.ceil(items.length / column) - 1)))
 			parent.style.height = parentHeight+'px'
 		}).then(() => {
 			// Bug last item get transition before position - Remove setTimeout
 			setTimeout(() => {
-				item.forEach((el, i) => {
+				items.forEach((el, i) => {
 				el.style.transition = 'transform .4s ease-in-out, opacity .2s ease-in-out'
 			})
 			}, 100)
@@ -66,33 +67,42 @@ class Sortable {
 	clickFilter(ev) {
 		ev.preventDefault()
 		const dataLink = this.dataset.sortableLink
-		document.querySelectorAll('[data-sortable-link]').forEach(el => {
-			el.classList.remove('active')
+		sortable.links.forEach(el => {
+			el.classList.remove(sortable.active)
 		})
-		this.classList.add('active')
+		this.classList.add(sortable.active)
 		let obj = document.querySelectorAll(`[data-sortable]`)
-		let arrTest = []
+		let itemsFilter = []
 		new Promise((resolve, reject) => {
 			resolve(
 				Object.keys(obj).map(key => obj[key]).filter(el => {
 					if(dataLink === 'all') {
 						el.style.opacity = '1'
-						arrTest.push(el)
+						itemsFilter.push(el)
 					} else {
 						if(el.dataset.sortable !== dataLink) {
 							el.style.opacity = '0'
 						} else {
 							el.style.opacity = '1'
-							arrTest.push(el)
+							itemsFilter.push(el)
 						}
 					}
 					
 				})
 			)
 		}).then(() => {
-			sortable.orderItems(arrTest)
+			sortable.items = itemsFilter
+		}).then(() => {
+			sortable.orderItems()
 		}).catch(err => {
 			console.error(err)
+		})
+	}
+
+	linksTriggered(){
+		let {links} = this
+		links.forEach(el => {
+			el.onclick = sortable.clickFilter
 		})
 	}
 }
@@ -101,14 +111,13 @@ const sortable = new Sortable({
 	parent: document.querySelector('.portfolio-project')
 })
 sortable.orderItems()
+sortable.linksTriggered()
 
-document.querySelectorAll('[data-sortable-link]').forEach(el => {
-	el.onclick = sortable.clickFilter
-})
+
 
 window.addEventListener('resize', () => {
 	clearTimeout(window.sortableResize)
 	window.sortableResize = setTimeout(() => {
-		sortable.orderItems(undefined, true)
+		sortable.orderItems()
 	}, 500)
 })
