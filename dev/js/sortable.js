@@ -100,9 +100,9 @@ class Sortable {
 	}
 
 	linksTriggered(){
-		let {links} = this
+		let {links, clickFilter} = this
 		links.forEach(el => {
-			el.onclick = sortable.clickFilter
+			el.onclick = clickFilter
 		})
 	}
 }
