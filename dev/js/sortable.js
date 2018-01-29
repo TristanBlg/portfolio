@@ -12,6 +12,8 @@ class Sortable {
 		this.items = Array.from(this.parent.children)
 		this.column = column
 		this.margin = margin
+
+		this.init()
 	}
 
 	orderItems(){
@@ -105,13 +107,17 @@ class Sortable {
 			el.onclick = clickFilter
 		})
 	}
+
+	init(){
+		this.linksTriggered()
+		this.orderItems()
+	}
 }
 
 const sortable = new Sortable({
 	parent: document.querySelector('.portfolio-project')
 })
-sortable.orderItems()
-sortable.linksTriggered()
+
 
 
 
