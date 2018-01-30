@@ -1,24 +1,25 @@
 class Sortable {
 	constructor({
-		parent = document.querySelector('.sortable'),
-		links = document.querySelectorAll('[data-sortable-link]'),
-		active = 'active',
-		column = 3, 
-		margin = 20
+		parent 	= document.querySelector('.sortable'),
+		links 	= document.querySelectorAll('[data-sortable-link]'),
+		active 	= 'active',
+		column 	= 3, 
+		margin 	= 20
 	}) {
-		this.parent = parent
-		this.links = Array.from(links)
-		this.active = active
-		this.items = Array.from(this.parent.children)
-		this.column = column
-		this.margin = margin
+		this.parent 	= parent
+		this.links 		= Array.from(links)
+		this.active 	= active
+		this.items 		= Array.from(this.parent.children)
+		this.column 	= column
+		this.margin 	= margin
 
 		this.init()
+		this.resize()
 	}
 
 	orderItems(){
 		let {parent, items, column, margin} = this
-		let windowWidth = window.innerWidth
+		let windowWidth 					= window.innerWidth
 
 		if(windowWidth <= 980 && windowWidth > 480) {
 			column = 2
@@ -26,22 +27,22 @@ class Sortable {
 			column = 1
 		}
 
-		let parentWidth = parent.offsetWidth
-		let rectWidth = (parentWidth - (margin * (column - 1))) / column
-		let positionX = 0
+		let parentWidth 	= parent.offsetWidth
+		let rectWidth 		= (parentWidth - (margin * (column - 1))) / column
+		let positionX 		= 0
 		let arrayRectHeight = []
 
 		new Promise((resolve, reject) => {
 			resolve(
 				items.forEach((el, i) => {
-					el.style.position = "absolute"
-					el.style.width = rectWidth+'px'
+					el.style.position 	= "absolute"
+					el.style.width 		= rectWidth+'px'
 					arrayRectHeight.push(el.offsetHeight)
 					if(i >= column){
-						let rectHeight = (arrayRectHeight[i - column] * Math.floor((i / column))) + (margin * Math.floor((i / column)))
-						el.style.transform = `translate3d(${positionX}px, ${rectHeight}px, 0px)`
+						let rectHeight 		= (arrayRectHeight[i - column] * Math.floor((i / column))) + (margin * Math.floor((i / column)))
+						el.style.transform 	= `translate3d(${positionX}px, ${rectHeight}px, 0px)`
 					} else {
-						el.style.transform = `translate3d(${positionX}px, 0px, 0px)`
+						el.style.transform 	= `translate3d(${positionX}px, 0px, 0px)`
 					}
 					if(positionX >= rectWidth * (column - 1)) {
 						positionX = 0
@@ -51,28 +52,29 @@ class Sortable {
 				})
 			)
 		}).then(() => {
-			parent.style.position = 'relative'
-			let parentHeight = ((Math.ceil(items.length / column) * arrayRectHeight[0]) + (margin * (Math.ceil(items.length / column) - 1)))
-			parent.style.height = parentHeight+'px'
+			parent.style.position 	= 'relative'
+			let parentHeight 		= ((Math.ceil(items.length / column) * arrayRectHeight[0]) + (margin * (Math.ceil(items.length / column) - 1)))
+			parent.style.height 	= parentHeight+'px'
 		}).then(() => {
 			// Bug last item get transition before position - Remove setTimeout
 			setTimeout(() => {
 				items.forEach((el, i) => {
-				el.style.transition = 'transform .4s ease-in-out, opacity .2s ease-in-out'
-			})
+					el.style.transition = 'transform .4s ease-in-out, opacity .2s ease-in-out'
+				})
 			}, 100)
 		}).catch(err => {
 			console.error(err)
 		})
 	}
 
-	clickFilter(ev) {
-		ev.preventDefault()
-		const dataLink = this.dataset.sortableLink
-		sortable.links.forEach(el => {
-			el.classList.remove(sortable.active)
+	clickFilter(event, element) {
+		event.preventDefault()
+		let {links, active} = this
+		const dataLink = element.dataset.sortableLink
+		links.forEach(el => {
+			el.classList.remove(active)
 		})
-		this.classList.add(sortable.active)
+		element.classList.add(active)
 		let obj = document.querySelectorAll(`[data-sortable]`)
 		let itemsFilter = []
 		new Promise((resolve, reject) => {
@@ -93,9 +95,9 @@ class Sortable {
 				})
 			)
 		}).then(() => {
-			sortable.items = itemsFilter
+			this.items = itemsFilter
 		}).then(() => {
-			sortable.orderItems()
+			this.orderItems()
 		}).catch(err => {
 			console.error(err)
 		})
@@ -104,13 +106,23 @@ class Sortable {
 	linksTriggered(){
 		let {links, clickFilter} = this
 		links.forEach(el => {
-			el.onclick = clickFilter
+			el.style.cursor = "pointer"
+			el.addEventListener('click', event => this.clickFilter(event, el))
 		})
 	}
 
 	init(){
 		this.linksTriggered()
 		this.orderItems()
+	}
+
+	resize() {
+		window.addEventListener('resize', () => {
+			clearTimeout(window.sortableResize)
+			window.sortableResize = setTimeout(() => {
+				this.orderItems()
+			}, 500)
+		})
 	}
 }
 
@@ -121,9 +133,4 @@ const sortable = new Sortable({
 
 
 
-window.addEventListener('resize', () => {
-	clearTimeout(window.sortableResize)
-	window.sortableResize = setTimeout(() => {
-		sortable.orderItems()
-	}, 500)
-})
+
