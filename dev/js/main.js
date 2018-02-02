@@ -1,23 +1,23 @@
-ready = fn => {
+function ready(fn) {
 	if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
 		fn();
 	} else {
 		document.addEventListener('DOMContentLoaded', fn);
 	}
 }
-navbarActive = navbar => {
+function navbarActive(navbar) {
 	if(window.scrollY > 20) {
 		navbar.classList.add('active')
 	} else {
 		navbar.classList.remove('active')
 	}
 }
-headerParallax = header => {
+function headerParallax(header) {
 	const headerRect = header.getBoundingClientRect()
 	const headerX = headerRect.top
     header.style.backgroundPositionY = parseInt(-headerX / 5)+'px'
 }
-navAutoScroll = () => {
+function navAutoScroll() {
 	scrollIt = (destination, duration = 200, callback) => {
 		const start = window.pageYOffset
 		const startTime = 'now' in window.performance ? performance.now() : new Date().getTime()
@@ -69,7 +69,7 @@ navAutoScroll = () => {
 	})
 }
 
-ready(() => {
+ready(function() {
 	const header = document.getElementById('js-header')
 	const navbar = document.getElementById('js-navbar-desktop')
 	const container = 1170;
