@@ -26,6 +26,9 @@ ul {
 img {
   max-width: 100%; }
 
+strong {
+  font-weight: 500; }
+
 hr {
   background: #111;
   box-shadow: none;
