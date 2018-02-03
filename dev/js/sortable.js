@@ -105,7 +105,10 @@ class Sortable {
 
 	linksTriggered(){
 		let {links, clickFilter} = this
-		links.forEach(el => {
+		links.forEach((el, id) => {
+			if(id === 0){
+				el.classList.add('active')
+			}
 			el.style.cursor = "pointer"
 			el.addEventListener('click', event => this.clickFilter(event, el))
 		})
