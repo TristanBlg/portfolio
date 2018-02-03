@@ -38,10 +38,10 @@ hr {
   margin: 1rem 0; }
 
 ::selection {
-  background: rgba(255, 255, 149, 0.8); }
+  background: rgba(255, 255, 149, 0.9); }
 
 ::-moz-selection {
-  background: rgba(255, 255, 149, 0.8); }
+  background: rgba(255, 255, 149, 0.9); }
 
 .section {
   padding: 10rem 0; }
@@ -227,7 +227,7 @@ hr {
     font-weight: 300;
     display: block; }
     .portfolio__nav .nav__link.active, .portfolio__nav .nav__link:hover {
-      background: rgba(255, 255, 149, 0.8); }
+      background: rgba(255, 255, 149, 0.9); }
 
 .portfolio-project {
   margin-top: 2rem; }
@@ -238,7 +238,7 @@ hr {
       display: block; }
     .portfolio-project__item-overlay {
       position: absolute;
-      background: rgba(255, 255, 149, 0.8);
+      background: rgba(255, 255, 149, 0.9);
       overflow: auto;
       top: 0;
       left: 0;
