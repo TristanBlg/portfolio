@@ -12,7 +12,7 @@
 			&__item {
 				flex: 1;
 				background: #fff;
-				padding: ($gutter * 2) $gutter;
+				padding: 4rem $gutter;
 				text-align: left;
 				transition: box-shadow .2s ease-in-out;
 
@@ -22,7 +22,7 @@
 				&:not(:first-child),
 				&:not(:first-child):not(:last-child) {
 					@media (max-width: $breakpoint_s) {
-						margin: $gutter 0 0;
+						margin: 2rem 0 0;
 					}
 				}
 				&:hover {
@@ -32,7 +32,7 @@
 				&-icon {
 					height: 5rem;
 					width: 5rem;
-					margin-bottom: floor($gutter / 2);
+					margin-bottom: 1rem;
 				}
 			}
 		}

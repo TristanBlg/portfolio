@@ -6,7 +6,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		margin-bottom: ($gutter * 2);
+		margin-bottom: 4rem;
 		@media (max-width: $breakpoint_s) {
 			flex-direction: column;
 			align-items: center;
@@ -20,14 +20,14 @@
 					margin: 0;
 
 					&:not(:first-child) {
-						margin-top: ($gutter * 2);
+						margin-top: 4rem;
 					}
 				}
 
 				&-icon {
 					height: 4rem;
 					width: 4rem;
-					margin-bottom: floor($gutter / 2);
+					margin-bottom: 1rem;
 				}
 			}
 		}
