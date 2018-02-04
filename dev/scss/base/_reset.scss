@@ -1,36 +1,36 @@
 *,
-*:after,
-*:before {
-	box-sizing: border-box;
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 html {
-	font-size: .625em;
-	font-size: calc(1em * .625);
+    font-size: .625em;
+    font-size: calc(1em * .625);
 }
 body {
-	margin: 0;
-	padding: 0;
-	font: normal 300 1.4em #{'/'} line-height(1.4, $baseline) 'Ubuntu', helvetica, sans-serif;
-	color: $mainTextColor;
+    margin: 0;
+    padding: 0;
+    font: normal 300 1.4em #{'/'} line-height(1.4, $baseline) 'Ubuntu', helvetica, sans-serif;
+    color: $main-text-color;
 }
 a {
-	text-decoration: none;
-	color: $mainTextColor;
+    text-decoration: none;
+    color: $main-text-color;
 }
 ol,
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 strong {
-	font-weight: 500;
+    font-weight: 500;
 }
 hr {
-	background: #111;
+    background: #111;
     box-shadow: none;
     border: none;
     height: 1px;
@@ -38,8 +38,8 @@ hr {
     margin: 1rem 0;
 }
 ::selection {
-	background: $yellow;
+    background: $yellow;
 }
 ::-moz-selection {
-	background: $yellow;
+    background: $yellow;
 }

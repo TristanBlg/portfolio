@@ -1,11 +1,11 @@
 @function line-height($font-size, $baseline) {
-	$line-height: $baseline / $font-size;
-	$step: 1;
+    $line-height: $baseline / $font-size;
+    $step: 1;
 
-	@while $line-height < 1 {
-		$step: $step + 1;
-		$line-height: $baseline * $step / $font-size;
-	}
+    @while $line-height < 1 {
+        $step: $step + 1;
+        $line-height: $baseline * $step / $font-size;
+    }
 
-	@return $line-height;
+    @return $line-height;
 }

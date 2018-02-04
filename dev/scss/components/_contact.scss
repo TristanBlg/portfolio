@@ -1,35 +1,35 @@
 .contact {
-	background: #f6f6f6;
-	text-align: center;
+    background: #f6f6f6;
+    text-align: center;
 
-	&__type {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		margin-bottom: 4rem;
-		@media (max-width: $breakpoint_s) {
-			flex-direction: column;
-			align-items: center;
-		}
+    &__type {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+        @media (max-width: $breakpoint-s) {
+            flex-direction: column;
+            align-items: center;
+        }
 
-		.type {
-			//NOMANSLAND
-			&__item {
-				margin: 0 ($gutter * 2);
-				@media (max-width: $breakpoint_s) {
-					margin: 0;
+        .type {
+            //NOMANSLAND
+            &__item {
+                margin: 0 ($gutter * 2);
+                @media (max-width: $breakpoint-s) {
+                    margin: 0;
 
-					&:not(:first-child) {
-						margin-top: 4rem;
-					}
-				}
+                    &:not(:first-child) {
+                        margin-top: 4rem;
+                    }
+                }
 
-				&-icon {
-					height: 4rem;
-					width: 4rem;
-					margin-bottom: 1rem;
-				}
-			}
-		}
-	}
+                &-icon {
+                    height: 4rem;
+                    width: 4rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
 }
