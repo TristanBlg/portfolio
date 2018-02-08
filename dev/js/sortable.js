@@ -116,7 +116,9 @@ class Sortable {
 
     init(){
         this.linksTriggered()
-        this.orderItems()
+        window.addEventListener('load', () => {
+            this.orderItems()
+        })
     }
 
     resize() {
@@ -128,12 +130,3 @@ class Sortable {
         })
     }
 }
-
-const sortable = new Sortable({
-    parent: document.querySelector('.portfolio-project')
-})
-
-
-
-
-
