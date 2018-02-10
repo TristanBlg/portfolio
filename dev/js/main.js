@@ -95,7 +95,10 @@ function animateAtScroll(animationName = 'fadeIn', windowHeightRatio = 1.2, sele
             let sectionTop = el.getBoundingClientRect().top;
             if(windowHeight > sectionTop) {
                 if(!el.classList.contains(classStopAnimation)) {
-                    let delay = el.getAttribute(`data-${selectorDataName}`);
+                    let delay = el.getAttribute(`data-${selectorDataName}`)
+                    if(delay === undefined) {
+                        delay = 0
+                    }
                     el.classList.add(classStopAnimation)
                     setTimeout(function(){
                         el.classList.add(animationName)
