@@ -68,6 +68,8 @@ hr {
     .section-text--high {
       font-weight: 700;
       letter-spacing: 0.1rem; }
+    .section-text a {
+      text-decoration: underline; }
 
 .fadeIn {
   animation-name: fadeIn;
