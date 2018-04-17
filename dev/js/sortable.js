@@ -5,7 +5,7 @@ class Sortable {
         active  = 'active',
         column  = 3, 
         margin  = 20
-    }) {
+    } = {}) {
         this.parent     = parent
         this.links      = Array.from(links)
         this.active     = active

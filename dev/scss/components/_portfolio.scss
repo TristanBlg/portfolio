@@ -3,6 +3,9 @@
     &__nav {
         display: flex;
         justify-content: center;
+        @media screen and (max-width: $breakpoint-xs){
+            flex-direction: column;
+        }
         
         .nav {
             //NOMANSLAND

@@ -12,47 +12,41 @@ function navbarActive(navbar) {
         navbar.classList.remove('active')
     }
 }
-function headerParallax(header) {
-    const headerRect                    = header.getBoundingClientRect()
-    const headerX                       = headerRect.top
-    header.style.backgroundPositionY    = parseInt(-headerX / 5)+'px'
-}
-function navAutoScroll() {
-    scrollIt = (destination, duration = 200, callback) => {
-        const start                     = window.pageYOffset
-        const startTime                 = 'now' in window.performance ? performance.now() : new Date().getTime()
-        const documentHeight            = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)
-        const windowHeight              = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
-        const destinationOffset         = typeof destination === 'number' ? destination : destination.offsetTop
-        const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset)
+function scrollIt(destination, duration = 200, callback) {
+    const start                     = window.pageYOffset
+    const startTime                 = 'now' in window.performance ? performance.now() : new Date().getTime()
+    const documentHeight            = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)
+    const windowHeight              = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
+    const destinationOffset         = typeof destination === 'number' ? destination : destination.offsetTop
+    const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset)
 
-        if('requestAnimationFrame' in window === false) {
-            window.scroll(0, destinationOffsetToScroll)
+    if('requestAnimationFrame' in window === false) {
+        window.scroll(0, destinationOffsetToScroll)
+        if(callback) {
+            callback()
+        }
+        return
+    }
+
+    function scroll() {
+        const now   = 'now' in window.performance ? performance.now() : new Date().getTime()
+        const time  = Math.min(1, ((now - startTime) / duration))
+
+        window.scroll(0, Math.ceil((time * (destinationOffsetToScroll - start)) + start))
+
+        if(window.pageYOffset === destinationOffsetToScroll) {
             if(callback) {
                 callback()
             }
             return
         }
 
-        function scroll() {
-            const now   = 'now' in window.performance ? performance.now() : new Date().getTime()
-            const time  = Math.min(1, ((now - startTime) / duration))
-
-            window.scroll(0, Math.ceil((time * (destinationOffsetToScroll - start)) + start))
-
-            if(window.pageYOffset === destinationOffsetToScroll) {
-                if(callback) {
-                    callback()
-                }
-                return
-            }
-
-            requestAnimationFrame(scroll)
-        }
-
-        scroll()
+        requestAnimationFrame(scroll)
     }
 
+    scroll()
+}
+function navAutoScroll() {
     const navLink = document.querySelectorAll('[href^="#"]')
 
     Array.prototype.forEach.call(navLink, el => {
@@ -71,9 +65,9 @@ function navAutoScroll() {
         })
     })
 }
-function animateAtScroll(animationName = 'fadeIn', windowHeightRatio = 1.2, selectorDataName = 'delay') {
+function animateAtScroll({animationName = 'fadeIn', windowHeightRatio = 1.2, selectorDataName = 'delay'} = {}) {
     const elements = Array.from(document.querySelectorAll(`[data-${selectorDataName}]`));
-
+    
     elements.forEach(function(el){
         switch (animationName) {
             case 'fadeIn':
@@ -83,7 +77,7 @@ function animateAtScroll(animationName = 'fadeIn', windowHeightRatio = 1.2, sele
                 el.style.opacity = 1;
                 break;
             default:
-                console.error('animateAtScroll() -> Animation name is required.')
+                console.error('animateAtScroll() -> Your animationName parameter doesn\'t exist in the script.')
         }
     })
 
@@ -125,12 +119,10 @@ ready(function() {
     const containerXs   = 480;
 
     navAutoScroll()
-    headerParallax(header)
     navbarActive(navbar)
     animateAtScroll()
 
     window.addEventListener('scroll', () => {
-        headerParallax(header)
         navbarActive(navbar)
     })
 })
