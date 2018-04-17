@@ -152,8 +152,7 @@ hr {
       transition: all .2s ease-in-out; }
     .navbar__nav--mobile {
       flex: 1;
-      justify-content: space-between;
-      justify-content: space-evenly; }
+      justify-content: space-around; }
       .navbar__nav--mobile .nav__link {
         color: #111;
         padding: 1rem; }
@@ -222,14 +221,15 @@ hr {
       background: #fff;
       padding: 4rem 20px;
       text-align: left;
-      transition: box-shadow .2s ease-in-out; }
+      transition: box-shadow .2s ease-in-out, transform .2s ease-in-out; }
       .skillbar__skills .skills__item:not(:first-child):not(:last-child) {
         margin: 0 20px; }
       @media (max-width: 768px) {
         .skillbar__skills .skills__item:not(:first-child), .skillbar__skills .skills__item:not(:first-child):not(:last-child) {
           margin: 2rem 0 0; } }
       .skillbar__skills .skills__item:hover {
-        box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1); }
+        box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
+        transform: translate3d(0, -1rem, 0); }
       .skillbar__skills .skills__item-icon {
         height: 5rem;
         width: 5rem;
@@ -270,11 +270,15 @@ hr {
       transition: opacity .2s ease-in-out;
       padding: 40px;
       text-align: left; }
+      @media screen and (max-width: 768px) {
+        .portfolio-project__item-overlay {
+          opacity: 1; } }
       .portfolio-project__item-overlay__icon {
         height: 3rem;
         width: 3rem;
         margin-top: 10px; }
-    .portfolio-project__item:hover .portfolio-project__item-overlay {
+    .portfolio-project__item:hover .portfolio-project__item-overlay,
+    .portfolio-project__item:active .portfolio-project__item-overlay {
       opacity: 1; }
 
 .contact {

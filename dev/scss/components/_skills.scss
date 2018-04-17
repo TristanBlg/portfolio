@@ -14,7 +14,7 @@
                 background: #fff;
                 padding: 4rem $gutter;
                 text-align: left;
-                transition: box-shadow .2s ease-in-out;
+                transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 
                 &:not(:first-child):not(:last-child) {
                     margin: 0 $gutter;
@@ -27,6 +27,7 @@
                 }
                 &:hover {
                     box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, .1);
+                    transform: translate3d(0, -1rem, 0);
                 }
 
                 &-icon {

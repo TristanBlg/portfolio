@@ -47,6 +47,9 @@
                 transition: opacity .2s ease-in-out;
                 padding: 40px;
                 text-align: left;
+                @media screen and (max-width: $breakpoint-s){
+                    opacity: 1;
+                }
 
                 &__icon {
                     height: 3rem;
@@ -55,7 +58,8 @@
                 }
             }
 
-            &:hover &-overlay {
+            &:hover &-overlay,
+            &:active &-overlay {
                 opacity: 1;
             }
         }
