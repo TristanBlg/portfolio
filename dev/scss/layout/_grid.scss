@@ -1,16 +1,16 @@
 .container {
-    width: 100%;
-    max-width: $breakpoint;
-    margin: 0 auto;
-    padding: 0 ($gutter / 2);
+  width: 100%;
+  max-width: $breakpoint;
+  margin: 0 auto;
+  padding: 0 ($gutter / 2);
 
-    &--m {
-        max-width: $breakpoint-m;
-    }
-    &--s {
-        max-width: $breakpoint-s;
-    }
-    &--xs {
-        max-width: $breakpoint-xs;
-    }
+  &--m {
+    max-width: $breakpoint-m;
+  }
+  &--s {
+    max-width: $breakpoint-s;
+  }
+  &--xs {
+    max-width: $breakpoint-xs;
+  }
 }

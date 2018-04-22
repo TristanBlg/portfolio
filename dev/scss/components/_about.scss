@@ -1,28 +1,27 @@
 .about {
-    
-    &__socialmedia {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
+  
+  &__socialmedia {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 
-        .socialmedia {
-            //NOMANSLAND
-            &__link {
-                display: block;
-                margin: 0 10px;
-                color: inherit;
+    .socialmedia {
+      &__link {
+        display: block;
+        margin: 0 10px;
+        color: inherit;
 
-                &-icon {
-                    height: 3rem;
-                    width: 3rem;
-                }
-            }
+        &-icon {
+          height: 3rem;
+          width: 3rem;
         }
+      }
     }
+  }
 
-    .section {
-        &-text {
-            text-align: left;
-        }
+  .section {
+    &-text {
+      text-align: left;
     }
+  }
 }

@@ -1,41 +1,42 @@
 .skillbar {
-    background: #f6f6f6;
+  background: #f6f6f6;
 
-    &__skills {
-        display: flex;
-        @media (max-width: $breakpoint-s) {
-            flex-direction: column;
-        }
-
-        .skills {
-            //NOMANSLAND
-            &__item {
-                flex: 1;
-                background: #fff;
-                padding: 4rem $gutter;
-                text-align: left;
-                transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
-
-                &:not(:first-child):not(:last-child) {
-                    margin: 0 $gutter;
-                }
-                &:not(:first-child),
-                &:not(:first-child):not(:last-child) {
-                    @media (max-width: $breakpoint-s) {
-                        margin: 2rem 0 0;
-                    }
-                }
-                &:hover {
-                    box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, .1);
-                    transform: translate3d(0, -1rem, 0);
-                }
-
-                &-icon {
-                    height: 5rem;
-                    width: 5rem;
-                    margin-bottom: 1rem;
-                }
-            }
-        }
+  &__skills {
+    display: flex;
+    @media (max-width: $breakpoint-s) {
+      flex-direction: column;
     }
+
+    .skills {
+      &__item {
+        flex: 1;
+        background: #fff;
+        padding: 4rem $gutter;
+        text-align: left;
+        transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+
+        &:not(:first-child):not(:last-child) {
+          margin: 0 $gutter;
+        }
+        &:not(:first-child),
+        &:not(:first-child):not(:last-child) {
+          @media (max-width: $breakpoint-s) {
+            margin: 2rem 0 0;
+          }
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, .1);
+          transform: translate3d(0, -1rem, 0);
+        }
+
+        &-icon {
+          height: 5rem;
+          width: 5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 }
