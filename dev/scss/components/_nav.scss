@@ -31,12 +31,12 @@
   }
 
   &__logo {
-    color: $main-text-color;
-    font-size: 2.4rem;
-    line-height: line-height(2.4, $baseline);
-    font-weight: 700;
-    font-family: 'Montserrat';
-    transition: all .2s ease-in-out;
+    font-size: 0;
+
+    svg {
+      width: 4rem;
+      transition: all .2s ease-in-out;
+    }
   }
   &__nav {
     display: flex;
@@ -49,8 +49,12 @@
         line-height: line-height(1.4, $baseline);
         font-weight: 400;
         font-family: 'Montserrat';
-        padding: 3rem $gutter;
+        padding: 0 $gutter;
         transition: all .2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
       }
     }
 
@@ -63,6 +67,7 @@
         &__link {
           color: $main-text-color;
           padding: 1rem;
+          height: auto;
 
           &-icon {
             width: 2.4rem;
@@ -79,15 +84,18 @@
   }
   &.active & {
     &__logo {
-      font-size: 1.8rem;
-      line-height: line-height(1.8, $baseline);
+      font-size: 0;
+
+      svg {
+        width: 3rem;
+      }
     }
     &__nav {
       display: flex;
       
       .nav {
         &__link {
-          padding: 2rem $gutter;
+          height: 50px;
         }
       }
     }

@@ -6,12 +6,15 @@
 html {
   font-size: .625em;
   font-size: calc(1em * .625);
+  -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
   padding: 0;
   font: normal 300 1.4em #{'/'} line-height(1.4, $baseline) 'Ubuntu', helvetica, sans-serif;
   color: $main-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 a {
   text-decoration: none;
